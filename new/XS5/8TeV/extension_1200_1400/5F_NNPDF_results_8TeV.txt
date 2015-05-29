@@ -1,0 +1,29 @@
+Gaussian-bins for as: [(0.114, 0), (0.115, 4), (0.116, 25), (0.117, 71), (0.118, 100), (0.119, 71), (0.12, 25), (0.121, 4), (0.122, 0), (0.123, 0), (0.124, 0)]
+WARNING: No LO alphas+pdf-error for NNPDF.
+WARNING for PDF NNPDF23 with m_H = 1200: Previously calculated value for central_lo 3.623800e-04 differs from the value 3.628533e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1200: Previously calculated value for central_nlo 1.288640e-04 differs from the value 1.266690e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1400: Previously calculated value for central_lo 1.441960e-04 differs from the value 1.444913e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1400: Previously calculated value for central_nlo 4.280700e-05 differs from the value 4.183583e-05 calculated now.
+Gaussian-bins for mb: [(4.25, 0), (4.5, 4), (4.75, 100), (5.0, 4), (5.25, 0)]
+WARNING: No LO mb+pdf-error for NNPDF.
+WARNING for PDF NNPDF23 with m_H = 1200: Previously calculated value for central_lo 3.628533e-04 differs from the value 3.628241e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1200: Previously calculated value for central_nlo 1.266690e-04 differs from the value 1.428269e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1400: Previously calculated value for central_lo 1.444913e-04 differs from the value 1.443065e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1400: Previously calculated value for central_nlo 4.183583e-05 differs from the value 4.823981e-05 calculated now.
+ATTENTION: Combined errors for NNPDF23
+    Using mb+pdf-error as combined error for NNPDF23, since 
+    alphas+pdf-error is smaller then pdf-error.
+    Using mb+pdf-error for a_s = 0.119 for central value from
+    pdf-error with a_s = 0.118.
+
+
+***************************************
+*  NNPDF23-Results for  8TeV          *
+***************************************
+
+  M_H    pdf-set         LO    pdf_error      NLO    pdf_error   as_pdf_error   mb_pdf_error      scale_var    total_error
+--------------------------------------------------------------------------------------------------------------------------
+ 1200    NNPDF23   3.62e-04   +1.03e-04  1.29e-04    +2.32e-05      +2.49e-05      +2.55e-05      +1.60e-05      +4.15e-05
+                              -1.03e-04              -2.32e-05      -2.49e-05      -2.55e-05      -1.70e-05      -4.25e-05
+ 1400    NNPDF23   1.44e-04   +4.66e-05  4.28e-05    +9.54e-06      +1.03e-05      +1.03e-05      +5.60e-06      +1.59e-05
+                              -4.66e-05              -9.54e-06      -1.03e-05      -1.03e-05      -6.50e-06      -1.68e-05

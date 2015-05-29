@@ -1,0 +1,17 @@
+WARNING: Using CT10-pdf-error from nlo for lo also.
+WARNING: No LO alphas+pdf-error for CT10.
+ATTENTION: Combined errors for CT10
+    Using alphas + pdf-error as combined error for CT10, since no
+    mb-error is available for CT10.
+
+
+***************************************
+*  CT10-Results for  8TeV             *
+***************************************
+
+  M_H    pdf-set         LO       NLO      pdf_error       as_error       scale_var     total_error
+--------------------------------------------------------------------------------------------------------
+ 1200       CT10   1.04e-04   1.70e-04     +5.37e-05       +8.40e-06       +1.60e-05       +7.03e-05
+                                           -3.45e-05       -6.00e-06       -1.70e-05       -5.20e-05
+ 1400       CT10   3.51e-05   6.23e-05     +2.41e-05       +3.36e-06       +5.60e-06       +3.00e-05
+                                           -1.47e-05       -3.00e-06       -6.50e-06       -2.15e-05

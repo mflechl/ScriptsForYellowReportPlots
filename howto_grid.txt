@@ -1,0 +1,45 @@
+
+13 TeV:
+
+cd grid_tb/13tev
+
+cd 5FS
+#put tables here!
+./mergetables.sh
+cd ..
+
+cd 4FS
+#put tables here!
+./merge_4f.sh
+cd ..
+
+#put together
+./do_hadd
+cd ..
+#edit plot_tb.C and comment in correct number*C files
+get_santander_grid.sh
+
+
+
+
+
+#5FS
+
+cd grid_8tev
+#put tables here!
+./mergetables.sh
+
+#4FS
+cd maria_20150227_scan/8TeV
+./merge_4f.sh
+
+#put together
+
+cd ../tanbetascan_input/8tev
+./do_hadd
+
+cd ..
+get_santander_grid.sh
+
+
+

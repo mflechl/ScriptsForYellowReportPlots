@@ -1,0 +1,748 @@
+WARNING: Using pdf-error from alphas(MZ)=0.120/0.139 from MSTW for calculation with alphas(MZ)=0.118
+WARNING: Using CT10-pdf-error from nlo for lo also.
+Gaussian-bins for mb: [(4.25, 0), (4.5, 4), (4.75, 100), (5.0, 4), (5.25, 0)]
+WARNING: No LO mb+pdf-error for NNPDF.
+WARNING for PDF NNPDF23 with m_H = 200: Previously calculated value for central_lo 2.016500e-01 differs from the value 2.019352e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 200: Previously calculated value for central_nlo 1.947500e-01 differs from the value 2.023611e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 220: Previously calculated value for central_lo 1.675900e-01 differs from the value 1.678519e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 220: Previously calculated value for central_nlo 1.573700e-01 differs from the value 1.636759e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 240: Previously calculated value for central_lo 1.398200e-01 differs from the value 1.400463e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 240: Previously calculated value for central_nlo 1.280900e-01 differs from the value 1.334537e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 260: Previously calculated value for central_lo 1.171050e-01 differs from the value 1.173074e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 260: Previously calculated value for central_nlo 1.048040e-01 differs from the value 1.093972e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 280: Previously calculated value for central_lo 9.846200e-02 differs from the value 9.863241e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 280: Previously calculated value for central_nlo 8.618100e-02 differs from the value 9.002037e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 300: Previously calculated value for central_lo 8.306100e-02 differs from the value 8.320556e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 300: Previously calculated value for central_nlo 7.112800e-02 differs from the value 7.439352e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 320: Previously calculated value for central_lo 7.033700e-02 differs from the value 7.046389e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 320: Previously calculated value for central_nlo 5.894600e-02 differs from the value 6.172685e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 340: Previously calculated value for central_lo 5.977900e-02 differs from the value 5.988796e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 340: Previously calculated value for central_nlo 4.902800e-02 differs from the value 5.141389e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 360: Previously calculated value for central_lo 5.096700e-02 differs from the value 5.106296e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 360: Previously calculated value for central_nlo 4.092300e-02 differs from the value 4.296574e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 380: Previously calculated value for central_lo 4.360600e-02 differs from the value 4.368796e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 380: Previously calculated value for central_nlo 3.427700e-02 differs from the value 3.603611e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 400: Previously calculated value for central_lo 3.740500e-02 differs from the value 3.747778e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 400: Previously calculated value for central_nlo 2.880300e-02 differs from the value 3.031667e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 420: Previously calculated value for central_lo 3.218400e-02 differs from the value 3.224722e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 420: Previously calculated value for central_nlo 2.426400e-02 differs from the value 2.558056e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 440: Previously calculated value for central_lo 2.777700e-02 differs from the value 2.783148e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 440: Previously calculated value for central_nlo 2.051600e-02 differs from the value 2.164722e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 460: Previously calculated value for central_lo 2.403100e-02 differs from the value 2.407963e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 460: Previously calculated value for central_nlo 1.739100e-02 differs from the value 1.836759e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 480: Previously calculated value for central_lo 2.084500e-02 differs from the value 2.088704e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 480: Previously calculated value for central_nlo 1.478400e-02 differs from the value 1.563426e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 500: Previously calculated value for central_lo 1.812900e-02 differs from the value 1.816667e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 500: Previously calculated value for central_nlo 1.259200e-02 differs from the value 1.333981e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 520: Previously calculated value for central_lo 1.579970e-02 differs from the value 1.583120e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 520: Previously calculated value for central_nlo 1.075720e-02 differs from the value 1.140676e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 540: Previously calculated value for central_lo 1.380660e-02 differs from the value 1.383389e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 540: Previously calculated value for central_nlo 9.212100e-03 differs from the value 9.778889e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 560: Previously calculated value for central_lo 1.209010e-02 differs from the value 1.211454e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 560: Previously calculated value for central_nlo 7.905800e-03 differs from the value 8.404259e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 580: Previously calculated value for central_lo 1.060730e-02 differs from the value 1.062991e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 580: Previously calculated value for central_nlo 6.799100e-03 differs from the value 7.236204e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 600: Previously calculated value for central_lo 9.325200e-03 differs from the value 9.344537e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 600: Previously calculated value for central_nlo 5.859300e-03 differs from the value 6.243519e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 620: Previously calculated value for central_lo 8.212500e-03 differs from the value 8.229444e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 620: Previously calculated value for central_nlo 5.056600e-03 differs from the value 5.395000e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 640: Previously calculated value for central_lo 7.245900e-03 differs from the value 7.260556e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 640: Previously calculated value for central_nlo 4.373400e-03 differs from the value 4.672130e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 660: Previously calculated value for central_lo 6.403300e-03 differs from the value 6.416389e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 660: Previously calculated value for central_nlo 3.789800e-03 differs from the value 4.054259e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 680: Previously calculated value for central_lo 5.669100e-03 differs from the value 5.680648e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 680: Previously calculated value for central_nlo 3.290200e-03 differs from the value 3.523426e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 700: Previously calculated value for central_lo 5.026900e-03 differs from the value 5.036944e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 700: Previously calculated value for central_nlo 2.861600e-03 differs from the value 3.068056e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 720: Previously calculated value for central_lo 4.464400e-03 differs from the value 4.473241e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 720: Previously calculated value for central_nlo 2.492100e-03 differs from the value 2.675093e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 740: Previously calculated value for central_lo 3.970900e-03 differs from the value 3.978704e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 740: Previously calculated value for central_nlo 2.174200e-03 differs from the value 2.336852e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 760: Previously calculated value for central_lo 3.536400e-03 differs from the value 3.543333e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 760: Previously calculated value for central_nlo 1.899300e-03 differs from the value 2.043704e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 780: Previously calculated value for central_lo 3.154400e-03 differs from the value 3.160556e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 780: Previously calculated value for central_nlo 1.661500e-03 differs from the value 1.790000e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 800: Previously calculated value for central_lo 2.816900e-03 differs from the value 2.822315e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 800: Previously calculated value for central_nlo 1.456400e-03 differs from the value 1.570370e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 820: Previously calculated value for central_lo 2.518500e-03 differs from the value 2.523333e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 820: Previously calculated value for central_nlo 1.277100e-03 differs from the value 1.379074e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 840: Previously calculated value for central_lo 2.254870e-03 differs from the value 2.259139e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 840: Previously calculated value for central_nlo 1.122080e-03 differs from the value 1.212944e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 860: Previously calculated value for central_lo 2.021400e-03 differs from the value 2.025185e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 860: Previously calculated value for central_nlo 9.865200e-04 differs from the value 1.067917e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 880: Previously calculated value for central_lo 1.812840e-03 differs from the value 1.816148e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 880: Previously calculated value for central_nlo 8.684500e-04 differs from the value 9.414074e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 900: Previously calculated value for central_lo 1.628280e-03 differs from the value 1.631278e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 900: Previously calculated value for central_nlo 7.654500e-04 differs from the value 8.309074e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 920: Previously calculated value for central_lo 1.464640e-03 differs from the value 1.467074e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 920: Previously calculated value for central_nlo 6.754500e-04 differs from the value 7.341759e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 940: Previously calculated value for central_lo 1.318560e-03 differs from the value 1.320917e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 940: Previously calculated value for central_nlo 5.966600e-04 differs from the value 6.493333e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 960: Previously calculated value for central_lo 1.187760e-03 differs from the value 1.189741e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 960: Previously calculated value for central_nlo 5.276200e-04 differs from the value 5.749167e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 980: Previously calculated value for central_lo 1.071020e-03 differs from the value 1.072787e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 980: Previously calculated value for central_nlo 4.669800e-04 differs from the value 5.095556e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1000: Previously calculated value for central_lo 9.670000e-04 differs from the value 9.685463e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1000: Previously calculated value for central_nlo 4.137000e-04 differs from the value 4.520093e-04 calculated now.
+X 0
+WARNING: No LO mb+pdf-error for MSTW.
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+X 0
+WARNING: No mb-error for CT10!!
+WARNING for combined with m_H = 200: Previously calculated value for central_lo 1.813002e-01 differs from the value 1.774676e-01 calculated now.
+WARNING for combined with m_H = 200: Previously calculated value for central_nlo 1.911018e-01 differs from the value 1.986137e-01 calculated now.
+WARNING for combined with m_H = 220: Previously calculated value for central_lo 1.497961e-01 differs from the value 1.464259e-01 calculated now.
+WARNING for combined with m_H = 220: Previously calculated value for central_nlo 1.540755e-01 differs from the value 1.593449e-01 calculated now.
+WARNING for combined with m_H = 240: Previously calculated value for central_lo 1.232893e-01 differs from the value 1.205231e-01 calculated now.
+WARNING for combined with m_H = 240: Previously calculated value for central_nlo 1.257690e-01 differs from the value 1.307378e-01 calculated now.
+WARNING for combined with m_H = 260: Previously calculated value for central_lo 1.031660e-01 differs from the value 1.001537e-01 calculated now.
+WARNING for combined with m_H = 260: Previously calculated value for central_nlo 1.034042e-01 differs from the value 1.071015e-01 calculated now.
+WARNING for combined with m_H = 280: Previously calculated value for central_lo 8.564159e-02 differs from the value 8.341620e-02 calculated now.
+WARNING for combined with m_H = 280: Previously calculated value for central_nlo 8.492352e-02 differs from the value 8.803378e-02 calculated now.
+WARNING for combined with m_H = 300: Previously calculated value for central_lo 7.171049e-02 differs from the value 6.970278e-02 calculated now.
+WARNING for combined with m_H = 300: Previously calculated value for central_nlo 7.038067e-02 differs from the value 7.275115e-02 calculated now.
+WARNING for combined with m_H = 320: Previously calculated value for central_lo 6.027124e-02 differs from the value 5.848194e-02 calculated now.
+WARNING for combined with m_H = 320: Previously calculated value for central_nlo 5.855499e-02 differs from the value 6.038301e-02 calculated now.
+WARNING for combined with m_H = 340: Previously calculated value for central_lo 5.088330e-02 differs from the value 4.929398e-02 calculated now.
+WARNING for combined with m_H = 340: Previously calculated value for central_nlo 4.890931e-02 differs from the value 5.031403e-02 calculated now.
+WARNING for combined with m_H = 360: Previously calculated value for central_lo 4.312738e-02 differs from the value 4.168148e-02 calculated now.
+WARNING for combined with m_H = 360: Previously calculated value for central_nlo 4.103718e-02 differs from the value 4.207463e-02 calculated now.
+WARNING for combined with m_H = 380: Previously calculated value for central_lo 3.665533e-02 differs from the value 3.534398e-02 calculated now.
+WARNING for combined with m_H = 380: Previously calculated value for central_nlo 3.454647e-02 differs from the value 3.529477e-02 calculated now.
+WARNING for combined with m_H = 400: Previously calculated value for central_lo 3.121170e-02 differs from the value 3.008889e-02 calculated now.
+WARNING for combined with m_H = 400: Previously calculated value for central_nlo 2.910304e-02 differs from the value 2.968273e-02 calculated now.
+WARNING for combined with m_H = 420: Previously calculated value for central_lo 2.662805e-02 differs from the value 2.567361e-02 calculated now.
+WARNING for combined with m_H = 420: Previously calculated value for central_nlo 2.462065e-02 differs from the value 2.506854e-02 calculated now.
+WARNING for combined with m_H = 440: Previously calculated value for central_lo 2.283790e-02 differs from the value 2.196574e-02 calculated now.
+WARNING for combined with m_H = 440: Previously calculated value for central_nlo 2.092248e-02 differs from the value 2.117601e-02 calculated now.
+WARNING for combined with m_H = 460: Previously calculated value for central_lo 1.969421e-02 differs from the value 1.888981e-02 calculated now.
+WARNING for combined with m_H = 460: Previously calculated value for central_nlo 1.784481e-02 differs from the value 1.803269e-02 calculated now.
+WARNING for combined with m_H = 480: Previously calculated value for central_lo 1.699772e-02 differs from the value 1.624352e-02 calculated now.
+WARNING for combined with m_H = 480: Previously calculated value for central_nlo 1.528165e-02 differs from the value 1.537700e-02 calculated now.
+WARNING for combined with m_H = 500: Previously calculated value for central_lo 1.473657e-02 differs from the value 1.403333e-02 calculated now.
+WARNING for combined with m_H = 500: Previously calculated value for central_nlo 1.309304e-02 differs from the value 1.306729e-02 calculated now.
+WARNING for combined with m_H = 520: Previously calculated value for central_lo 1.276144e-02 differs from the value 1.214560e-02 calculated now.
+WARNING for combined with m_H = 520: Previously calculated value for central_nlo 1.124080e-02 differs from the value 1.124145e-02 calculated now.
+WARNING for combined with m_H = 540: Previously calculated value for central_lo 1.107643e-02 differs from the value 1.053694e-02 calculated now.
+WARNING for combined with m_H = 540: Previously calculated value for central_nlo 9.647009e-03 differs from the value 9.636846e-03 calculated now.
+WARNING for combined with m_H = 560: Previously calculated value for central_lo 9.666754e-03 differs from the value 9.167269e-03 calculated now.
+WARNING for combined with m_H = 560: Previously calculated value for central_nlo 8.314344e-03 differs from the value 8.297523e-03 calculated now.
+WARNING for combined with m_H = 580: Previously calculated value for central_lo 8.433870e-03 differs from the value 7.989954e-03 calculated now.
+WARNING for combined with m_H = 580: Previously calculated value for central_nlo 7.179278e-03 differs from the value 7.140173e-03 calculated now.
+WARNING for combined with m_H = 600: Previously calculated value for central_lo 7.380896e-03 differs from the value 6.977269e-03 calculated now.
+WARNING for combined with m_H = 600: Previously calculated value for central_nlo 6.212110e-03 differs from the value 6.159809e-03 calculated now.
+WARNING for combined with m_H = 620: Previously calculated value for central_lo 6.472604e-03 differs from the value 6.099722e-03 calculated now.
+WARNING for combined with m_H = 620: Previously calculated value for central_nlo 5.386127e-03 differs from the value 5.332464e-03 calculated now.
+WARNING for combined with m_H = 640: Previously calculated value for central_lo 5.694358e-03 differs from the value 5.350278e-03 calculated now.
+WARNING for combined with m_H = 640: Previously calculated value for central_nlo 4.681426e-03 differs from the value 4.626737e-03 calculated now.
+WARNING for combined with m_H = 660: Previously calculated value for central_lo 5.012343e-03 differs from the value 4.698194e-03 calculated now.
+WARNING for combined with m_H = 660: Previously calculated value for central_nlo 4.076875e-03 differs from the value 4.018400e-03 calculated now.
+WARNING for combined with m_H = 680: Previously calculated value for central_lo 4.418117e-03 differs from the value 4.135324e-03 calculated now.
+WARNING for combined with m_H = 680: Previously calculated value for central_nlo 3.554538e-03 differs from the value 3.490084e-03 calculated now.
+WARNING for combined with m_H = 700: Previously calculated value for central_lo 3.907868e-03 differs from the value 3.643472e-03 calculated now.
+WARNING for combined with m_H = 700: Previously calculated value for central_nlo 3.108486e-03 differs from the value 3.052546e-03 calculated now.
+WARNING for combined with m_H = 720: Previously calculated value for central_lo 3.454715e-03 differs from the value 3.216620e-03 calculated now.
+WARNING for combined with m_H = 720: Previously calculated value for central_nlo 2.718700e-03 differs from the value 2.668370e-03 calculated now.
+WARNING for combined with m_H = 740: Previously calculated value for central_lo 3.057479e-03 differs from the value 2.844352e-03 calculated now.
+WARNING for combined with m_H = 740: Previously calculated value for central_nlo 2.385603e-03 differs from the value 2.321183e-03 calculated now.
+WARNING for combined with m_H = 760: Previously calculated value for central_lo 2.719570e-03 differs from the value 2.521667e-03 calculated now.
+WARNING for combined with m_H = 760: Previously calculated value for central_nlo 2.094423e-03 differs from the value 2.032681e-03 calculated now.
+WARNING for combined with m_H = 780: Previously calculated value for central_lo 2.413760e-03 differs from the value 2.235278e-03 calculated now.
+WARNING for combined with m_H = 780: Previously calculated value for central_nlo 1.842581e-03 differs from the value 1.789209e-03 calculated now.
+WARNING for combined with m_H = 800: Previously calculated value for central_lo 2.152558e-03 differs from the value 1.986157e-03 calculated now.
+WARNING for combined with m_H = 800: Previously calculated value for central_nlo 1.622064e-03 differs from the value 1.570370e-03 calculated now.
+WARNING for combined with m_H = 820: Previously calculated value for central_lo 1.915735e-03 differs from the value 1.766667e-03 calculated now.
+WARNING for combined with m_H = 820: Previously calculated value for central_nlo 1.429732e-03 differs from the value 1.379074e-03 calculated now.
+WARNING for combined with m_H = 840: Previously calculated value for central_lo 1.713744e-03 differs from the value 1.572569e-03 calculated now.
+WARNING for combined with m_H = 840: Previously calculated value for central_nlo 1.265709e-03 differs from the value 1.212944e-03 calculated now.
+WARNING for combined with m_H = 860: Previously calculated value for central_lo 1.536461e-03 differs from the value 1.402593e-03 calculated now.
+WARNING for combined with m_H = 860: Previously calculated value for central_nlo 1.120867e-03 differs from the value 1.064401e-03 calculated now.
+WARNING for combined with m_H = 880: Previously calculated value for central_lo 1.366536e-03 differs from the value 1.251574e-03 calculated now.
+WARNING for combined with m_H = 880: Previously calculated value for central_nlo 9.897844e-04 differs from the value 9.414074e-04 calculated now.
+WARNING for combined with m_H = 900: Previously calculated value for central_lo 1.228784e-03 differs from the value 1.118639e-03 calculated now.
+WARNING for combined with m_H = 900: Previously calculated value for central_nlo 8.774584e-04 differs from the value 8.309074e-04 calculated now.
+WARNING for combined with m_H = 920: Previously calculated value for central_lo 1.102393e-03 differs from the value 1.001037e-03 calculated now.
+WARNING for combined with m_H = 920: Previously calculated value for central_nlo 7.790566e-04 differs from the value 7.341759e-04 calculated now.
+WARNING for combined with m_H = 940: Previously calculated value for central_lo 9.901096e-04 differs from the value 8.969583e-04 calculated now.
+WARNING for combined with m_H = 940: Previously calculated value for central_nlo 6.934977e-04 differs from the value 6.493333e-04 calculated now.
+WARNING for combined with m_H = 960: Previously calculated value for central_lo 8.901885e-04 differs from the value 8.043704e-04 calculated now.
+WARNING for combined with m_H = 960: Previously calculated value for central_nlo 6.171585e-04 differs from the value 5.749167e-04 calculated now.
+WARNING for combined with m_H = 980: Previously calculated value for central_lo 8.010596e-04 differs from the value 7.218935e-04 calculated now.
+WARNING for combined with m_H = 980: Previously calculated value for central_nlo 5.498235e-04 differs from the value 5.096559e-04 calculated now.
+WARNING for combined with m_H = 1000: Previously calculated value for central_lo 7.218596e-04 differs from the value 6.487731e-04 calculated now.
+WARNING for combined with m_H = 1000: Previously calculated value for central_nlo 4.902797e-04 differs from the value 4.520507e-04 calculated now.
+
+****************************
+*  MB - PDF - Errors       *
+****************************
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        200  2.019352e-01 +1.912763e-02  2.023611e-01 +8.603940e-03 +1.083906e-02    NNPDF23
+                          -1.912763e-02               -8.603940e-03 -1.083906e-02
+             1.690000e-01 +5.477226e-03  1.950000e-01 +9.380832e-03 +1.088441e-02    MSTW2008
+                          -8.185353e-03               -9.746794e-03 -1.097277e-02
+             1.530000e-01 +1.288240e-02  1.890000e-01 +1.288240e-02 +0.000000e+00    CT10
+                          -1.117718e-02               -1.117718e-02 -0.000000e+00
+
+  Combination:    LO + pdf: 1.530000e-01    +1.288240e-02
+                                            -1.117718e-02
+              NLO + as_pdf: 1.890000e-01    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        220  1.678519e-01 +1.651818e-02  1.636759e-01 +7.296955e-03 +9.043848e-03    NNPDF23
+                          -1.651818e-02               -7.296955e-03 -9.043848e-03
+             1.380000e-01 +5.656854e-03  1.570000e-01 +6.480741e-03 +7.788607e-03    MSTW2008
+                          -6.403124e-03               -1.014889e-02 -1.103007e-02
+             1.250000e-01 +1.060011e-02  1.530000e-01 +1.060011e-02 +0.000000e+00    CT10
+                          -9.516051e-03               -9.516051e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 1.250000e-01    +1.060011e-02
+                                            -9.516051e-03
+              NLO + as_pdf: 1.530000e-01    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        240  1.400463e-01 +1.429161e-02  1.334537e-01 +6.208653e-03 +7.656631e-03    NNPDF23
+                          -1.429161e-02               -6.208653e-03 -7.656631e-03
+             1.130000e-01 +5.099020e-03  1.280000e-01 +7.071068e-03 +7.934734e-03    MSTW2008
+                          -4.123106e-03               -6.855655e-03 -7.634763e-03
+             1.010000e-01 +8.768097e-03  1.250000e-01 +8.768097e-03 +0.000000e+00    CT10
+                          -8.533100e-03               -8.533100e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 1.010000e-01    +8.768097e-03
+                                            -8.533100e-03
+              NLO + as_pdf: 1.250000e-01    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        260  1.173074e-01 +1.237437e-02  1.093972e-01 +5.326225e-03 +6.495282e-03    NNPDF23
+                          -1.237437e-02               -5.326225e-03 -6.495282e-03
+             9.340000e-02 +4.013726e-03  1.050000e-01 +4.898979e-03 +5.682816e-03    MSTW2008
+                          -4.055860e-03               -6.082763e-03 -6.689593e-03
+             8.300000e-02 +8.955783e-03  1.020000e-01 +8.955783e-03 +0.000000e+00    CT10
+                          -6.147296e-03               -6.147296e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 8.300000e-02    +8.955783e-03
+                                            -6.147296e-03
+              NLO + as_pdf: 1.020000e-01    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        280  9.863241e-02 +1.074528e-02  9.002037e-02 +4.554201e-03 +5.565662e-03    NNPDF23
+                          -1.074528e-02               -4.554201e-03 -5.565662e-03
+             7.740000e-02 +3.218695e-03  8.640000e-02 +4.275512e-03 +4.914853e-03    MSTW2008
+                          -3.605551e-03               -5.451605e-03 -5.918481e-03
+             6.820000e-02 +6.971136e-03  8.450000e-02 +6.971136e-03 +0.000000e+00    CT10
+                          -6.124104e-03               -6.124104e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 6.820000e-02    +6.971136e-03
+                                            -6.124104e-03
+              NLO + as_pdf: 8.450000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        300  8.320556e-02 +9.381703e-03  7.439352e-02 +3.910671e-03 +4.745136e-03    NNPDF23
+                          -9.381703e-03               -3.910671e-03 -4.745136e-03
+             6.430000e-02 +2.901724e-03  7.140000e-02 +3.880722e-03 +4.373129e-03    MSTW2008
+                          -2.958040e-03               -4.665833e-03 -5.036349e-03
+             5.620000e-02 +5.983062e-03  7.000000e-02 +5.983062e-03 +0.000000e+00    CT10
+                          -5.221720e-03               -5.221720e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 5.620000e-02    +5.983062e-03
+                                            -5.221720e-03
+              NLO + as_pdf: 7.000000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        320  7.046389e-02 +8.184201e-03  6.172685e-02 +3.373408e-03 +4.071501e-03    NNPDF23
+                          -8.184201e-03               -3.373408e-03 -4.071501e-03
+             5.370000e-02 +2.479919e-03  5.930000e-02 +3.189044e-03 +3.604497e-03    MSTW2008
+                          -2.553429e-03               -4.032369e-03 -4.332327e-03
+             4.650000e-02 +5.188701e-03  5.820000e-02 +5.188701e-03 +0.000000e+00    CT10
+                          -4.478717e-03               -4.478717e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 4.650000e-02    +5.188701e-03
+                                            -4.478717e-03
+              NLO + as_pdf: 5.820000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        340  5.988796e-02 +7.166650e-03  5.141389e-02 +2.920671e-03 +3.500960e-03    NNPDF23
+                          -7.166650e-03               -2.920671e-03 -3.500960e-03
+             4.500000e-02 +2.090454e-03  4.940000e-02 +2.725803e-03 +3.060664e-03    MSTW2008
+                          -2.258318e-03               -3.442383e-03 -3.686787e-03
+             3.870000e-02 +4.497658e-03  4.860000e-02 +4.497658e-03 +0.000000e+00    CT10
+                          -3.879040e-03               -3.879040e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 3.870000e-02    +4.497658e-03
+                                            -3.879040e-03
+              NLO + as_pdf: 4.860000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        360  5.106296e-02 +6.295406e-03  4.296574e-02 +2.525620e-03 +3.018608e-03    NNPDF23
+                          -6.295406e-03               -2.525620e-03 -3.018608e-03
+             3.780000e-02 +1.894730e-03  4.130000e-02 +2.435159e-03 +2.704251e-03    MSTW2008
+                          -1.813836e-03               -2.934280e-03 -3.135094e-03
+             3.230000e-02 +3.982010e-03  4.070000e-02 +3.982010e-03 +0.000000e+00    CT10
+                          -3.307650e-03               -3.307650e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 3.230000e-02    +3.982010e-03
+                                            -3.307650e-03
+              NLO + as_pdf: 4.070000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        380  4.368796e-02 +5.545201e-03  3.603611e-02 +2.192497e-03 +2.605905e-03    NNPDF23
+                          -5.545201e-03               -2.192497e-03 -2.605905e-03
+             3.190000e-02 +1.655295e-03  3.470000e-02 +2.092845e-03 +2.312630e-03    MSTW2008
+                          -1.615549e-03               -2.588436e-03 -2.752471e-03
+             2.700000e-02 +3.533487e-03  3.420000e-02 +3.533487e-03 +0.000000e+00    CT10
+                          -2.840538e-03               -2.840538e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 2.700000e-02    +3.533487e-03
+                                            -2.840538e-03
+              NLO + as_pdf: 3.420000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        400  3.747778e-02 +4.900616e-03  3.031667e-02 +1.906896e-03 +2.260696e-03    NNPDF23
+                          -4.900616e-03               -1.906896e-03 -2.260696e-03
+             2.700000e-02 +1.489966e-03  2.920000e-02 +1.717556e-03 +1.901540e-03    MSTW2008
+                          -1.389244e-03               -2.278157e-03 -2.411900e-03
+             2.270000e-02 +2.988286e-03  2.890000e-02 +2.988286e-03 +0.000000e+00    CT10
+                          -2.582212e-03               -2.582212e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 2.270000e-02    +2.988286e-03
+                                            -2.582212e-03
+              NLO + as_pdf: 2.890000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        420  3.224722e-02 +4.332977e-03  2.558056e-02 +1.659471e-03 +1.961663e-03    NNPDF23
+                          -4.332977e-03               -1.659471e-03 -1.961663e-03
+             2.290000e-02 +1.389244e-03  2.470000e-02 +1.456022e-03 +1.613820e-03    MSTW2008
+                          -1.140175e-03               -1.994994e-03 -2.105133e-03
+             1.910000e-02 +2.602175e-03  2.450000e-02 +2.602175e-03 +0.000000e+00    CT10
+                          -2.360882e-03               -2.360882e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 1.910000e-02    +2.602175e-03
+                                            -2.360882e-03
+              NLO + as_pdf: 2.450000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        440  2.783148e-02 +3.841582e-03  2.164722e-02 +1.449745e-03 +1.705267e-03    NNPDF23
+                          -3.841582e-03               -1.449745e-03 -1.705267e-03
+             1.950000e-02 +1.232883e-03  2.090000e-02 +1.232883e-03 +1.360800e-03    MSTW2008
+                          -9.695360e-04               -1.811077e-03 -1.900467e-03
+             1.610000e-02 +2.287733e-03  2.080000e-02 +2.287733e-03 +0.000000e+00    CT10
+                          -2.042776e-03               -2.042776e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 1.610000e-02    +2.287733e-03
+                                            -2.042776e-03
+              NLO + as_pdf: 2.080000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        460  2.407963e-02 +3.414192e-03  1.836759e-02 +1.269542e-03 +1.494778e-03    NNPDF23
+                          -3.414192e-03               -1.269542e-03 -1.494778e-03
+             1.670000e-02 +9.110434e-04  1.780000e-02 +1.109054e-03 +1.218202e-03    MSTW2008
+                          -9.591663e-04               -1.523155e-03 -1.596997e-03
+             1.370000e-02 +2.046391e-03  1.770000e-02 +2.046391e-03 +0.000000e+00    CT10
+                          -1.756778e-03               -1.756778e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 1.370000e-02    +2.046391e-03
+                                            -1.756778e-03
+              NLO + as_pdf: 1.770000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        480  2.088704e-02 +3.032163e-03  1.563426e-02 +1.108618e-03 +1.306788e-03    NNPDF23
+                          -3.032163e-03               -1.108618e-03 -1.306788e-03
+             1.430000e-02 +8.602325e-04  1.510000e-02 +1.044031e-03 +1.129878e-03    MSTW2008
+                          -8.544004e-04               -1.220656e-03 -1.287037e-03
+             1.160000e-02 +1.845030e-03  1.510000e-02 +1.845030e-03 +0.000000e+00    CT10
+                          -1.481723e-03               -1.481723e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 1.160000e-02    +1.845030e-03
+                                            -1.481723e-03
+              NLO + as_pdf: 1.510000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        500  1.816667e-02 +2.709217e-03  1.333981e-02 +9.753197e-04 +1.143608e-03    NNPDF23
+                          -2.709217e-03               -9.753197e-04 -1.143608e-03
+             1.230000e-02 +7.141428e-04  1.290000e-02 +8.185353e-04 +8.942036e-04    MSTW2008
+                          -8.124038e-04               -1.195826e-03 -1.248839e-03
+             9.900000e-03 +1.669396e-03  1.290000e-02 +1.669396e-03 +0.000000e+00    CT10
+                          -1.265079e-03               -1.265079e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 9.900000e-03    +1.669396e-03
+                                            -1.265079e-03
+              NLO + as_pdf: 1.290000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        520  1.583120e-02 +2.418679e-03  1.140676e-02 +8.573262e-04 +1.004422e-03    NNPDF23
+                          -2.418679e-03               -8.573262e-04 -1.004422e-03
+             1.060000e-02 +5.656854e-04  1.110000e-02 +7.874008e-04 +8.469616e-04    MSTW2008
+                          -7.071068e-04               -9.797959e-04 -1.028272e-03
+             8.460000e-03 +1.481723e-03  1.110000e-02 +1.481723e-03 +0.000000e+00    CT10
+                          -1.155504e-03               -1.155504e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 8.460000e-03    +1.481723e-03
+                                            -1.155504e-03
+              NLO + as_pdf: 1.110000e-02    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        540  1.383389e-02 +2.161672e-03  9.778889e-03 +7.536863e-04 +8.804357e-04    NNPDF23
+                          -2.161672e-03               -7.536863e-04 -8.804357e-04
+             9.130000e-03 +5.583010e-04  9.500000e-03 +6.838128e-04 +7.330048e-04    MSTW2008
+                          -5.616939e-04               -8.475848e-04 -8.856332e-04
+             7.240000e-03 +1.265605e-03  9.570000e-03 +1.265605e-03 +0.000000e+00    CT10
+                          -1.055416e-03               -1.055416e-03 -0.000000e+00
+
+  Combination:    LO + pdf: 7.240000e-03    +1.265605e-03
+                                            -1.055416e-03
+              NLO + as_pdf: 9.570000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        560  1.211454e-02 +1.942330e-03  8.404259e-03 +6.656510e-04 +7.776326e-04    NNPDF23
+                          -1.942330e-03               -6.656510e-04 -7.776326e-04
+             7.900000e-03 +4.926459e-04  8.180000e-03 +6.464519e-04 +6.879092e-04    MSTW2008
+                          -5.049752e-04               -7.343705e-04 -7.668459e-04
+             6.220000e-03 +1.138539e-03  8.250000e-03 +1.138539e-03 +0.000000e+00    CT10
+                          -9.189223e-04               -9.189223e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 6.220000e-03    +1.138539e-03
+                                            -9.189223e-04
+              NLO + as_pdf: 8.250000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        580  1.062991e-02 +1.741143e-03  7.236204e-03 +5.881422e-04 +6.862858e-04    NNPDF23
+                          -1.741143e-03               -5.881422e-04 -6.862858e-04
+             6.850000e-03 +4.296510e-04  7.050000e-03 +5.665686e-04 +6.013672e-04    MSTW2008
+                          -4.473254e-04               -6.649812e-04 -6.921445e-04
+             5.350000e-03 +1.007598e-03  7.140000e-03 +1.007598e-03 +0.000000e+00    CT10
+                          -8.307032e-04               -8.307032e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 5.350000e-03    +1.007598e-03
+                                            -8.307032e-04
+              NLO + as_pdf: 7.140000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        600  9.344537e-03 +1.565404e-03  6.243519e-03 +5.209069e-04 +6.066012e-04    NNPDF23
+                          -1.565404e-03               -5.209069e-04 -6.066012e-04
+             5.950000e-03 +3.896152e-04  6.090000e-03 +4.866210e-04 +5.163912e-04    MSTW2008
+                          -3.917908e-04               -5.979967e-04 -6.205025e-04
+             4.610000e-03 +8.958259e-04  6.190000e-03 +8.958259e-04 +0.000000e+00    CT10
+                          -7.388130e-04               -7.388130e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 4.610000e-03    +8.958259e-04
+                                            -7.388130e-04
+              NLO + as_pdf: 6.190000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        620  8.229444e-03 +1.411914e-03  5.395000e-03 +4.619922e-04 +5.371759e-04    NNPDF23
+                          -1.411914e-03               -4.619922e-04 -5.371759e-04
+             5.170000e-03 +3.472751e-04  5.270000e-03 +4.441846e-04 +4.692136e-04    MSTW2008
+                          -3.507136e-04               -5.175906e-04 -5.372485e-04
+             3.970000e-03 +8.076467e-04  5.370000e-03 +8.076467e-04 +0.000000e+00    CT10
+                          -6.492071e-04               -6.492071e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 3.970000e-03    +8.076467e-04
+                                            -6.492071e-04
+              NLO + as_pdf: 5.370000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        640  7.260556e-03 +1.273909e-03  4.672130e-03 +4.101988e-04 +4.765022e-04    NNPDF23
+                          -1.273909e-03               -4.101988e-04 -4.765022e-04
+             4.510000e-03 +2.994996e-04  4.580000e-03 +3.924283e-04 +4.140338e-04    MSTW2008
+                          -3.144837e-04               -4.584757e-04 -4.751579e-04
+             3.440000e-03 +7.296511e-04  4.670000e-03 +7.296511e-04 +0.000000e+00    CT10
+                          -5.710925e-04               -5.710925e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 3.440000e-03    +7.296511e-04
+                                            -5.710925e-04
+              NLO + as_pdf: 4.670000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        660  6.416389e-03 +1.147856e-03  4.054259e-03 +3.651456e-04 +4.230932e-04    NNPDF23
+                          -1.147856e-03               -3.651456e-04 -4.230932e-04
+             3.940000e-03 +2.744085e-04  3.980000e-03 +3.519943e-04 +3.703661e-04    MSTW2008
+                          -2.783882e-04               -4.064480e-04 -4.205520e-04
+             2.980000e-03 +6.590951e-04  4.070000e-03 +6.590951e-04 +0.000000e+00    CT10
+                          -5.064697e-04               -5.064697e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 2.980000e-03    +6.590951e-04
+                                            -5.064697e-04
+              NLO + as_pdf: 4.070000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        680  5.680648e-03 +1.038541e-03  3.523426e-03 +3.250796e-04 +3.763677e-04    NNPDF23
+                          -1.038541e-03               -3.250796e-04 -3.763677e-04
+             3.450000e-03 +2.402082e-04  3.460000e-03 +3.006659e-04 +3.163583e-04    MSTW2008
+                          -2.569047e-04               -3.672874e-04 -3.796261e-04
+             2.590000e-03 +5.839564e-04  3.560000e-03 +5.839564e-04 +0.000000e+00    CT10
+                          -4.614078e-04               -4.614078e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 2.590000e-03    +5.839564e-04
+                                            -4.614078e-04
+              NLO + as_pdf: 3.560000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        700  5.036944e-03 +9.397192e-04  3.068056e-03 +2.896313e-04 +3.347770e-04    NNPDF23
+                          -9.397192e-04               -2.896313e-04 -3.347770e-04
+             3.020000e-03 +2.302173e-04  3.020000e-03 +2.949576e-04 +3.080348e-04    MSTW2008
+                          -2.144761e-04               -3.070831e-04 -3.177398e-04
+             2.250000e-03 +5.350032e-04  3.110000e-03 +5.350032e-04 +0.000000e+00    CT10
+                          -4.008838e-04               -4.008838e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 2.250000e-03    +5.350032e-04
+                                            -4.008838e-04
+              NLO + as_pdf: 3.110000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        720  4.473241e-03 +8.514721e-04  2.675093e-03 +2.589072e-04 +2.987466e-04    NNPDF23
+                          -8.514721e-04               -2.589072e-04 -2.987466e-04
+             2.650000e-03 +2.068816e-04  2.640000e-03 +2.668333e-04 +2.776657e-04    MSTW2008
+                          -1.838478e-04               -2.675818e-04 -2.770993e-04
+             1.960000e-03 +4.742074e-04  2.730000e-03 +4.742074e-04 +0.000000e+00    CT10
+                          -3.664430e-04               -3.664430e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 1.960000e-03    +4.742074e-04
+                                            -3.664430e-04
+              NLO + as_pdf: 2.730000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        740  3.978704e-03 +7.728814e-04  2.336852e-03 +2.309890e-04 +2.666113e-04    NNPDF23
+                          -7.728814e-04               -2.309890e-04 -2.666113e-04
+             2.330000e-03 +1.920937e-04  2.310000e-03 +2.229350e-04 +2.328430e-04    MSTW2008
+                          -1.661325e-04               -2.638181e-04 -2.710973e-04
+             1.710000e-03 +4.279956e-04  2.400000e-03 +4.279956e-04 +0.000000e+00    CT10
+                          -3.388242e-04               -3.388242e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 1.710000e-03    +4.279956e-04
+                                            -3.388242e-04
+              NLO + as_pdf: 2.400000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        760  3.543333e-03 +7.020008e-04  2.043704e-03 +2.068780e-04 +2.385337e-04    NNPDF23
+                          -7.020008e-04               -2.068780e-04 -2.385337e-04
+             2.060000e-03 +1.493318e-04  2.030000e-03 +1.886796e-04 +1.972758e-04    MSTW2008
+                          -1.754993e-04               -2.406242e-04 -2.468745e-04
+             1.500000e-03 +3.864243e-04  2.110000e-03 +3.864243e-04 +0.000000e+00    CT10
+                          -2.992612e-04               -2.992612e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 1.500000e-03    +3.864243e-04
+                                            -2.992612e-04
+              NLO + as_pdf: 2.110000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        780  3.160556e-03 +6.378473e-04  1.790000e-03 +1.859530e-04 +2.133664e-04    NNPDF23
+                          -6.378473e-04               -1.859530e-04 -2.133664e-04
+             1.810000e-03 +1.552417e-04  1.780000e-03 +1.857418e-04 +1.931006e-04    MSTW2008
+                          -1.378405e-04               -1.992486e-04 -2.049488e-04
+             1.310000e-03 +3.496156e-04  1.860000e-03 +3.496156e-04 +0.000000e+00    CT10
+                          -2.747271e-04               -2.747271e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 1.310000e-03    +3.496156e-04
+                                            -2.747271e-04
+              NLO + as_pdf: 1.860000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        800  2.822315e-03 +5.800273e-04  1.570370e-03 +1.666516e-04 +1.910469e-04    NNPDF23
+                          -5.800273e-04               -1.666516e-04 -1.910469e-04
+             1.600000e-03 +1.374773e-04  1.560000e-03 +1.581139e-04 +1.645581e-04    MSTW2008
+                          -1.228821e-04               -1.720465e-04 -1.773873e-04
+             1.150000e-03 +3.143796e-04  1.640000e-03 +3.143796e-04 +0.000000e+00    CT10
+                          -2.418115e-04               -2.418115e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 1.150000e-03    +3.143796e-04
+                                            -2.418115e-04
+              NLO + as_pdf: 1.640000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        820  2.523333e-03 +5.284882e-04  1.379074e-03 +1.497304e-04 +1.709650e-04    NNPDF23
+                          -5.284882e-04               -1.497304e-04 -1.709650e-04
+             1.420000e-03 +1.053565e-04  1.380000e-03 +1.479865e-04 +1.535078e-04    MSTW2008
+                          -1.268858e-04               -1.646208e-04 -1.690401e-04
+             1.010000e-03 +2.820952e-04  1.450000e-03 +2.820952e-04 +0.000000e+00    CT10
+                          -2.255189e-04               -2.255189e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 1.010000e-03    +2.820952e-04
+                                            -2.255189e-04
+              NLO + as_pdf: 1.450000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        840  2.259139e-03 +4.815450e-04  1.212944e-03 +1.348969e-04 +1.541346e-04    NNPDF23
+                          -4.815450e-04               -1.348969e-04 -1.541346e-04
+             1.250000e-03 +1.224745e-04  1.210000e-03 +1.431782e-04 +1.476347e-04    MSTW2008
+                          -9.219544e-05               -1.396424e-04 -1.436279e-04
+             8.860000e-04 +2.642346e-04  1.280000e-03 +2.642346e-04 +0.000000e+00    CT10
+                          -1.949262e-04               -1.949262e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 8.860000e-04    +2.642346e-04
+                                            -1.949262e-04
+              NLO + as_pdf: 1.280000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        860  2.025185e-03 +4.392533e-04  1.067917e-03 +1.213653e-04 +1.382429e-04    NNPDF23
+                          -4.392533e-04               -1.213653e-04 -1.382429e-04
+             1.110000e-03 +1.029563e-04  1.070000e-03 +1.100000e-04 +1.143391e-04    MSTW2008
+                          -8.831761e-05               -1.442221e-04 -1.473583e-04
+             7.800000e-04 +2.465793e-04  1.130000e-03 +2.465793e-04 +0.000000e+00    CT10
+                          -1.677304e-04               -1.677304e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 7.800000e-04    +2.465793e-04
+                                            -1.677304e-04
+              NLO + as_pdf: 1.130000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        880  1.816148e-03 +4.015638e-04  9.414074e-04 +1.091328e-04 +1.243455e-04    NNPDF23
+                          -4.015638e-04               -1.091328e-04 -1.243455e-04
+             9.880000e-04 +8.719518e-05  9.450000e-04 +1.085910e-04 +1.118110e-04    MSTW2008
+                          -8.586617e-05               -1.199917e-04 -1.227593e-04
+             6.870000e-04 +2.102516e-04  1.010000e-03 +2.102516e-04 +0.000000e+00    CT10
+                          -1.683309e-04               -1.683309e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 6.870000e-04    +2.102516e-04
+                                            -1.683309e-04
+              NLO + as_pdf: 1.010000e-03    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        900  1.631278e-03 +3.670539e-04  8.309074e-04 +9.844810e-05 +1.120584e-04    NNPDF23
+                          -3.670539e-04               -9.844810e-05 -1.120584e-04
+             8.780000e-04 +7.951101e-05  8.360000e-04 +9.585406e-05 +9.893063e-05    MSTW2008
+                          -7.603289e-05               -1.054514e-04 -1.078881e-04
+             6.060000e-04 +1.949148e-04  8.930000e-04 +1.949148e-04 +0.000000e+00    CT10
+                          -1.437664e-04               -1.437664e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 6.060000e-04    +1.949148e-04
+                                            -1.437664e-04
+              NLO + as_pdf: 8.930000e-04    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        920  1.467074e-03 +3.354131e-04  7.341759e-04 +8.893561e-05 +1.007883e-04    NNPDF23
+                          -3.354131e-04               -8.893561e-05 -1.007883e-04
+             7.810000e-04 +7.374280e-05  7.410000e-04 +8.619745e-05 +8.886259e-05    MSTW2008
+                          -6.854196e-05               -9.597916e-05 -9.812319e-05
+             5.350000e-04 +1.775987e-04  7.940000e-04 +1.775987e-04 +0.000000e+00    CT10
+                          -1.302663e-04               -1.302663e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 5.350000e-04    +1.775987e-04
+                                            -1.302663e-04
+              NLO + as_pdf: 7.940000e-04    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        940  1.320917e-03 +3.069161e-04  6.493333e-04 +8.031494e-05 +9.100765e-05    NNPDF23
+                          -3.069161e-04               -8.031494e-05 -9.100765e-05
+             6.960000e-04 +6.568105e-05  6.570000e-04 +7.915807e-05 +8.145330e-05    MSTW2008
+                          -6.263386e-05               -8.566796e-05 -8.753856e-05
+             4.730000e-04 +1.636503e-04  7.070000e-04 +1.636503e-04 +0.000000e+00    CT10
+                          -1.182569e-04               -1.182569e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 4.730000e-04    +1.636503e-04
+                                            -1.182569e-04
+              NLO + as_pdf: 7.070000e-04    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        960  1.189741e-03 +2.807506e-04  5.749167e-04 +7.264801e-05 +8.217910e-05    NNPDF23
+                          -2.807506e-04               -7.264801e-05 -8.217910e-05
+             6.210000e-04 +5.867708e-05  5.830000e-04 +7.161704e-05 +7.361631e-05    MSTW2008
+                          -5.825805e-05               -7.694803e-05 -7.856148e-05
+             4.190000e-04 +1.493450e-04  6.300000e-04 +1.493450e-04 +0.000000e+00    CT10
+                          -1.071335e-04               -1.071335e-04 -0.000000e+00
+
+  Combination:    LO + pdf: 4.190000e-04    +1.493450e-04
+                                            -1.071335e-04
+              NLO + as_pdf: 6.300000e-04    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+        980  1.072787e-03 +2.575698e-04  5.095556e-04 +6.576511e-05 +7.427120e-05    NNPDF23
+                          -2.575698e-04               -6.576511e-05 -7.427120e-05
+             5.540000e-04 +5.500000e-05  5.180000e-04 +6.427286e-05 +6.602738e-05    MSTW2008
+                          -5.163332e-05               -6.977105e-05 -7.119344e-05
+             3.710000e-04 +1.364321e-04  5.620000e-04 +1.364321e-04 +0.000000e+00    CT10
+                          -9.747069e-05               -9.747069e-05 -0.000000e+00
+
+  Combination:    LO + pdf: 3.710000e-04    +1.364321e-04
+                                            -9.747069e-05
+              NLO + as_pdf: 5.620000e-04    +0.000000e+00
+                                            -0.000000e+00
+        M_H            LO     pdf-error           NLO     pdf-error  pdf-mb-error  
+-----------------------------------------------------------------------------------
+       1000  9.685463e-04 +2.364040e-04  4.520093e-04 +5.961925e-05 +6.715855e-05    NNPDF23
+                          -2.364040e-04               -5.961925e-05 -6.715855e-05
+             4.950000e-04 +4.993996e-05  4.600000e-04 +5.770615e-05 +5.925060e-05    MSTW2008
+                          -4.696807e-05               -6.313478e-05 -6.440340e-05
+             3.290000e-04 +1.244786e-04  5.020000e-04 +1.244786e-04 +0.000000e+00    CT10
+                          -8.868482e-05               -8.868482e-05 -0.000000e+00
+
+  Combination:    LO + pdf: 3.290000e-04    +1.244786e-04
+                                            -8.868482e-05
+              NLO + as_pdf: 5.020000e-04    +0.000000e+00
+                                            -0.000000e+00

@@ -1,0 +1,4 @@
+rm -f CT10.root MSTW2008.root NNPDF23.root
+hadd CT10.root 4FS/CT10_*root 5FS/CT10_*root
+hadd MSTW2008.root 4FS/MSTW2008_*root 5FS/MSTW2008_*root
+hadd NNPDF23.root 4FS/NNPDF23_*root 5FS/NNPDF23_*root

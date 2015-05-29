@@ -1,0 +1,56 @@
+WARNING: Using pdf-error from alphas(MZ)=0.120/0.139 from MSTW for calculation with alphas(MZ)=0.118
+WARNING: Using CT10-pdf-error from nlo for lo also.
+Gaussian-bins for as: [(0.114, 0), (0.115, 4), (0.116, 25), (0.117, 71), (0.118, 100), (0.119, 71), (0.12, 25), (0.121, 4), (0.122, 0), (0.123, 0), (0.124, 0)]
+WARNING: No LO alphas+pdf-error for NNPDF.
+WARNING for PDF NNPDF23 with m_H = 1200: Previously calculated value for central_lo 3.623800e-04 differs from the value 3.628533e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1200: Previously calculated value for central_nlo 1.288640e-04 differs from the value 1.266690e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1400: Previously calculated value for central_lo 1.441960e-04 differs from the value 1.444913e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1400: Previously calculated value for central_nlo 4.280700e-05 differs from the value 4.183583e-05 calculated now.
+WARNING: No LO alphas+pdf-error for MSTW2008.
+WARNING: No LO alphas+pdf-error for CT10.
+WARNING for combined with m_H = 1200: Previously calculated value for central_lo 2.672819e-04 differs from the value 2.334267e-04 calculated now.
+WARNING for combined with m_H = 1200: Previously calculated value for central_nlo 1.646734e-04 differs from the value 1.630371e-04 calculated now.
+WARNING for combined with m_H = 1400: Previously calculated value for central_lo 1.055862e-04 differs from the value 8.979567e-05 calculated now.
+WARNING for combined with m_H = 1400: Previously calculated value for central_nlo 5.985066e-05 differs from the value 5.911740e-05 calculated now.
+Gaussian-bins for mb: [(4.25, 0), (4.5, 4), (4.75, 100), (5.0, 4), (5.25, 0)]
+WARNING: No LO mb+pdf-error for NNPDF.
+WARNING for PDF NNPDF23 with m_H = 1200: Previously calculated value for central_lo 3.628533e-04 differs from the value 3.628241e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1200: Previously calculated value for central_nlo 1.266690e-04 differs from the value 1.428269e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1400: Previously calculated value for central_lo 1.444913e-04 differs from the value 1.443065e-04 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1400: Previously calculated value for central_nlo 4.183583e-05 differs from the value 4.823981e-05 calculated now.
+X 0
+WARNING: No LO mb+pdf-error for MSTW.
+X 0
+WARNING: No mb-error for CT10!!
+WARNING for combined with m_H = 1200: Previously calculated value for central_lo 2.334267e-04 differs from the value 2.334120e-04 calculated now.
+WARNING for combined with m_H = 1200: Previously calculated value for central_nlo 1.630371e-04 differs from the value 1.443136e-04 calculated now.
+WARNING for combined with m_H = 1400: Previously calculated value for central_lo 8.979567e-05 differs from the value 8.970324e-05 calculated now.
+WARNING for combined with m_H = 1400: Previously calculated value for central_nlo 5.911740e-05 differs from the value 5.012448e-05 calculated now.
+ATTENTION: Combined errors for NNPDF23
+    Using mb+pdf-error as combined error for NNPDF23, since 
+    alphas+pdf-error is smaller then pdf-error.
+    Using mb+pdf-error for a_s = 0.119 for central value from
+    pdf-error with a_s = 0.118.
+
+ATTENTION: Combined errors for MSTW2008
+    Using mb + pdf + alphas-error added in quadrature.
+
+ATTENTION: Combined errors for CT10
+    Using alphas + pdf-error as combined error for CT10, since no
+    mb-error is available for CT10.
+
+
+
+
+<open file '5F_combined_results_8TeV.tex', mode 'w' at 0x7f53b5c8e780>
+
+***************************************
+*  Combined-Results for  8TeV         *
+***************************************
+
+  M_H    pdf-set         LO    pdf_error      NLO    total_error
+----------------------------------------------------------------
+ 1200   combined   2.88e-04   +1.98e-04  1.64e-04    +7.65e-05
+                              -1.98e-04              -7.75e-05      
+ 1400   combined   1.14e-04   +8.52e-05  5.96e-05    +3.27e-05
+                              -8.52e-05              -3.36e-05      

@@ -1,0 +1,262 @@
+Gaussian-bins for as: [(0.114, 0), (0.115, 4), (0.116, 25), (0.117, 71), (0.118, 100), (0.119, 71), (0.12, 25), (0.121, 4), (0.122, 0), (0.123, 0), (0.124, 0)]
+WARNING: No LO alphas+pdf-error for NNPDF.
+WARNING for PDF NNPDF23 with m_H = 200: Previously calculated value for central_lo 6.679000e-01 differs from the value 6.677600e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 200: Previously calculated value for central_nlo 7.579100e-01 differs from the value 7.567667e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 220: Previously calculated value for central_lo 5.652800e-01 differs from the value 5.651733e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 220: Previously calculated value for central_nlo 6.284700e-01 differs from the value 6.274433e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 240: Previously calculated value for central_lo 4.800900e-01 differs from the value 4.799900e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 240: Previously calculated value for central_nlo 5.249400e-01 differs from the value 5.241000e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 260: Previously calculated value for central_lo 4.094000e-01 differs from the value 4.092933e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 260: Previously calculated value for central_nlo 4.406800e-01 differs from the value 4.399400e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 280: Previously calculated value for central_lo 3.502900e-01 differs from the value 3.502100e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 280: Previously calculated value for central_nlo 3.715200e-01 differs from the value 3.708733e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 300: Previously calculated value for central_lo 3.008400e-01 differs from the value 3.007600e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 300: Previously calculated value for central_nlo 3.143700e-01 differs from the value 3.138000e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 320: Previously calculated value for central_lo 2.592000e-01 differs from the value 2.591267e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 320: Previously calculated value for central_nlo 2.669700e-01 differs from the value 2.664800e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 340: Previously calculated value for central_lo 2.240700e-01 differs from the value 2.240500e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 340: Previously calculated value for central_nlo 2.275700e-01 differs from the value 2.271000e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 360: Previously calculated value for central_lo 1.943300e-01 differs from the value 1.942967e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 360: Previously calculated value for central_nlo 1.945700e-01 differs from the value 1.941600e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 380: Previously calculated value for central_lo 1.690600e-01 differs from the value 1.690133e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 380: Previously calculated value for central_nlo 1.668900e-01 differs from the value 1.665300e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 400: Previously calculated value for central_lo 1.475000e-01 differs from the value 1.474867e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 400: Previously calculated value for central_nlo 1.435600e-01 differs from the value 1.432633e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 420: Previously calculated value for central_lo 1.291000e-01 differs from the value 1.290800e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 420: Previously calculated value for central_nlo 1.239500e-01 differs from the value 1.236700e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 440: Previously calculated value for central_lo 1.132590e-01 differs from the value 1.132377e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 440: Previously calculated value for central_nlo 1.072220e-01 differs from the value 1.069837e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 460: Previously calculated value for central_lo 9.964900e-02 differs from the value 9.963767e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 460: Previously calculated value for central_nlo 9.303300e-02 differs from the value 9.281267e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 480: Previously calculated value for central_lo 8.790400e-02 differs from the value 8.788733e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 480: Previously calculated value for central_nlo 8.092500e-02 differs from the value 8.073067e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 500: Previously calculated value for central_lo 7.769600e-02 differs from the value 7.768667e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 500: Previously calculated value for central_nlo 7.057200e-02 differs from the value 7.039533e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 520: Previously calculated value for central_lo 6.884200e-02 differs from the value 6.883133e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 520: Previously calculated value for central_nlo 6.169100e-02 differs from the value 6.152967e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 540: Previously calculated value for central_lo 6.112400e-02 differs from the value 6.111333e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 540: Previously calculated value for central_nlo 5.404800e-02 differs from the value 5.390500e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 560: Previously calculated value for central_lo 5.439800e-02 differs from the value 5.438933e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 560: Previously calculated value for central_nlo 4.746400e-02 differs from the value 4.732767e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 580: Previously calculated value for central_lo 4.850000e-02 differs from the value 4.849333e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 580: Previously calculated value for central_nlo 4.176000e-02 differs from the value 4.163800e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 600: Previously calculated value for central_lo 4.333300e-02 differs from the value 4.332833e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 600: Previously calculated value for central_nlo 3.681700e-02 differs from the value 3.670833e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 620: Previously calculated value for central_lo 3.878100e-02 differs from the value 3.877633e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 620: Previously calculated value for central_nlo 3.252600e-02 differs from the value 3.242167e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 640: Previously calculated value for central_lo 3.476900e-02 differs from the value 3.476567e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 640: Previously calculated value for central_nlo 2.877700e-02 differs from the value 2.868700e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 660: Previously calculated value for central_lo 3.122700e-02 differs from the value 3.122300e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 660: Previously calculated value for central_nlo 2.550900e-02 differs from the value 2.542800e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 680: Previously calculated value for central_lo 2.809200e-02 differs from the value 2.809133e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 680: Previously calculated value for central_nlo 2.265400e-02 differs from the value 2.257733e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 700: Previously calculated value for central_lo 2.531100e-02 differs from the value 2.531167e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 700: Previously calculated value for central_nlo 2.015700e-02 differs from the value 2.008433e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 720: Previously calculated value for central_lo 2.284000e-02 differs from the value 2.283667e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 720: Previously calculated value for central_nlo 1.795200e-02 differs from the value 1.788733e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 740: Previously calculated value for central_lo 2.064300e-02 differs from the value 2.064233e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 740: Previously calculated value for central_nlo 1.602100e-02 differs from the value 1.596133e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 760: Previously calculated value for central_lo 1.867900e-02 differs from the value 1.867900e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 760: Previously calculated value for central_nlo 1.431800e-02 differs from the value 1.426233e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 780: Previously calculated value for central_lo 1.692600e-02 differs from the value 1.692867e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 780: Previously calculated value for central_nlo 1.280900e-02 differs from the value 1.275833e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 800: Previously calculated value for central_lo 1.536300e-02 differs from the value 1.536167e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 800: Previously calculated value for central_nlo 1.147960e-02 differs from the value 1.143460e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 820: Previously calculated value for central_nlo 1.030080e-02 differs from the value 1.025537e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 840: Previously calculated value for central_lo 1.270050e-02 differs from the value 1.269997e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 840: Previously calculated value for central_nlo 9.252400e-03 differs from the value 9.213167e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 860: Previously calculated value for central_lo 1.156430e-02 differs from the value 1.156343e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 860: Previously calculated value for central_nlo 8.322500e-03 differs from the value 8.285100e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 880: Previously calculated value for central_lo 1.053960e-02 differs from the value 1.054207e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 880: Previously calculated value for central_nlo 7.494300e-03 differs from the value 7.460267e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 900: Previously calculated value for central_lo 9.622900e-03 differs from the value 9.623900e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 900: Previously calculated value for central_nlo 6.756800e-03 differs from the value 6.725000e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 920: Previously calculated value for central_lo 8.792600e-03 differs from the value 8.793333e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 920: Previously calculated value for central_nlo 6.098700e-03 differs from the value 6.069100e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 940: Previously calculated value for central_lo 8.043500e-03 differs from the value 8.043967e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 940: Previously calculated value for central_nlo 5.510500e-03 differs from the value 5.483000e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 960: Previously calculated value for central_lo 7.365000e-03 differs from the value 7.365533e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 960: Previously calculated value for central_nlo 4.984400e-03 differs from the value 4.958767e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 980: Previously calculated value for central_lo 6.749600e-03 differs from the value 6.750467e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 980: Previously calculated value for central_nlo 4.512700e-03 differs from the value 4.488867e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1000: Previously calculated value for central_lo 6.192000e-03 differs from the value 6.192867e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1000: Previously calculated value for central_nlo 4.090100e-03 differs from the value 4.068033e-03 calculated now.
+Gaussian-bins for mb: [(4.25, 0), (4.5, 4), (4.75, 100), (5.0, 4), (5.25, 0)]
+WARNING: No LO mb+pdf-error for NNPDF.
+WARNING for PDF NNPDF23 with m_H = 200: Previously calculated value for central_lo 6.677600e-01 differs from the value 6.684907e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 200: Previously calculated value for central_nlo 7.567667e-01 differs from the value 7.777500e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 220: Previously calculated value for central_lo 5.651733e-01 differs from the value 5.657963e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 220: Previously calculated value for central_nlo 6.274433e-01 differs from the value 6.457130e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 240: Previously calculated value for central_lo 4.799900e-01 differs from the value 4.805648e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 240: Previously calculated value for central_nlo 5.241000e-01 differs from the value 5.397870e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 260: Previously calculated value for central_lo 4.092933e-01 differs from the value 4.098333e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 260: Previously calculated value for central_nlo 4.399400e-01 differs from the value 4.534907e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 280: Previously calculated value for central_lo 3.502100e-01 differs from the value 3.506759e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 280: Previously calculated value for central_nlo 3.708733e-01 differs from the value 3.826667e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 300: Previously calculated value for central_lo 3.007600e-01 differs from the value 3.011852e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 300: Previously calculated value for central_nlo 3.138000e-01 differs from the value 3.241481e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 320: Previously calculated value for central_lo 2.591267e-01 differs from the value 2.595000e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 320: Previously calculated value for central_nlo 2.664800e-01 differs from the value 2.754630e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 340: Previously calculated value for central_lo 2.240500e-01 differs from the value 2.243611e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 340: Previously calculated value for central_nlo 2.271000e-01 differs from the value 2.349630e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 360: Previously calculated value for central_lo 1.942967e-01 differs from the value 1.945833e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 360: Previously calculated value for central_nlo 1.941600e-01 differs from the value 2.010833e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 380: Previously calculated value for central_lo 1.690133e-01 differs from the value 1.692870e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 380: Previously calculated value for central_nlo 1.665300e-01 differs from the value 1.725648e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 400: Previously calculated value for central_lo 1.474867e-01 differs from the value 1.477037e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 400: Previously calculated value for central_nlo 1.432633e-01 differs from the value 1.487407e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 420: Previously calculated value for central_lo 1.290800e-01 differs from the value 1.292963e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 420: Previously calculated value for central_nlo 1.236700e-01 differs from the value 1.283889e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 440: Previously calculated value for central_lo 1.132377e-01 differs from the value 1.134370e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 440: Previously calculated value for central_nlo 1.069837e-01 differs from the value 1.112028e-01 calculated now.
+WARNING for PDF NNPDF23 with m_H = 460: Previously calculated value for central_lo 9.963767e-02 differs from the value 9.980093e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 460: Previously calculated value for central_nlo 9.281267e-02 differs from the value 9.656204e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 480: Previously calculated value for central_lo 8.788733e-02 differs from the value 8.803519e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 480: Previously calculated value for central_nlo 8.073067e-02 differs from the value 8.407037e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 500: Previously calculated value for central_lo 7.768667e-02 differs from the value 7.781759e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 500: Previously calculated value for central_nlo 7.039533e-02 differs from the value 7.337222e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 520: Previously calculated value for central_lo 6.883133e-02 differs from the value 6.895278e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 520: Previously calculated value for central_nlo 6.152967e-02 differs from the value 6.419259e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 540: Previously calculated value for central_lo 6.111333e-02 differs from the value 6.122407e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 540: Previously calculated value for central_nlo 5.390500e-02 differs from the value 5.628704e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 560: Previously calculated value for central_lo 5.438933e-02 differs from the value 5.448889e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 560: Previously calculated value for central_nlo 4.732767e-02 differs from the value 4.945741e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 580: Previously calculated value for central_lo 4.849333e-02 differs from the value 4.858333e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 580: Previously calculated value for central_nlo 4.163800e-02 differs from the value 4.355278e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 600: Previously calculated value for central_lo 4.332833e-02 differs from the value 4.340833e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 600: Previously calculated value for central_nlo 3.670833e-02 differs from the value 3.843148e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 620: Previously calculated value for central_lo 3.877633e-02 differs from the value 3.884907e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 620: Previously calculated value for central_nlo 3.242167e-02 differs from the value 3.397407e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 640: Previously calculated value for central_lo 3.476567e-02 differs from the value 3.483056e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 640: Previously calculated value for central_nlo 2.868700e-02 differs from the value 3.008519e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 660: Previously calculated value for central_lo 3.122300e-02 differs from the value 3.128241e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 660: Previously calculated value for central_nlo 2.542800e-02 differs from the value 2.669074e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 680: Previously calculated value for central_lo 2.809133e-02 differs from the value 2.814352e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 680: Previously calculated value for central_nlo 2.257733e-02 differs from the value 2.372222e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 700: Previously calculated value for central_lo 2.531167e-02 differs from the value 2.535741e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 700: Previously calculated value for central_nlo 2.008433e-02 differs from the value 2.112037e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 720: Previously calculated value for central_lo 2.283667e-02 differs from the value 2.288426e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 720: Previously calculated value for central_nlo 1.788733e-02 differs from the value 1.883333e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 740: Previously calculated value for central_lo 2.064233e-02 differs from the value 2.068241e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 740: Previously calculated value for central_nlo 1.596133e-02 differs from the value 1.681296e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 760: Previously calculated value for central_lo 1.867900e-02 differs from the value 1.871389e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 760: Previously calculated value for central_nlo 1.426233e-02 differs from the value 1.503889e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 780: Previously calculated value for central_lo 1.692867e-02 differs from the value 1.695926e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 780: Previously calculated value for central_nlo 1.275833e-02 differs from the value 1.346852e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 800: Previously calculated value for central_lo 1.536167e-02 differs from the value 1.539167e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 800: Previously calculated value for central_nlo 1.143460e-02 differs from the value 1.207593e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 820: Previously calculated value for central_lo 1.395970e-02 differs from the value 1.398676e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 820: Previously calculated value for central_nlo 1.025537e-02 differs from the value 1.084241e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 840: Previously calculated value for central_lo 1.269997e-02 differs from the value 1.272454e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 840: Previously calculated value for central_nlo 9.213167e-03 differs from the value 9.751204e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 860: Previously calculated value for central_lo 1.156343e-02 differs from the value 1.158657e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 860: Previously calculated value for central_nlo 8.285100e-03 differs from the value 8.775278e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 880: Previously calculated value for central_lo 1.054207e-02 differs from the value 1.056019e-02 calculated now.
+WARNING for PDF NNPDF23 with m_H = 880: Previously calculated value for central_nlo 7.460267e-03 differs from the value 7.908704e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 900: Previously calculated value for central_lo 9.623900e-03 differs from the value 9.641944e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 900: Previously calculated value for central_nlo 6.725000e-03 differs from the value 7.135278e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 920: Previously calculated value for central_lo 8.793333e-03 differs from the value 8.810741e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 920: Previously calculated value for central_nlo 6.069100e-03 differs from the value 6.445370e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 940: Previously calculated value for central_lo 8.043967e-03 differs from the value 8.059352e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 940: Previously calculated value for central_nlo 5.483000e-03 differs from the value 5.827870e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 960: Previously calculated value for central_lo 7.365533e-03 differs from the value 7.379444e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 960: Previously calculated value for central_nlo 4.958767e-03 differs from the value 5.275093e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 980: Previously calculated value for central_lo 6.750467e-03 differs from the value 6.763148e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 980: Previously calculated value for central_nlo 4.488867e-03 differs from the value 4.779722e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1000: Previously calculated value for central_lo 6.192867e-03 differs from the value 6.204352e-03 calculated now.
+WARNING for PDF NNPDF23 with m_H = 1000: Previously calculated value for central_nlo 4.068033e-03 differs from the value 4.335556e-03 calculated now.
+ATTENTION: Combined errors for NNPDF23
+    Using mb+pdf-error as combined error for NNPDF23, since 
+    alphas+pdf-error is smaller then pdf-error.
+    Using mb+pdf-error for a_s = 0.119 for central value from
+    pdf-error with a_s = 0.118.
+
+
+***************************************
+*  NNPDF23-Results for 13TeV          *
+***************************************
+
+  M_H    pdf-set         LO    pdf_error      NLO    pdf_error   as_pdf_error   mb_pdf_error      scale_var    total_error
+--------------------------------------------------------------------------------------------------------------------------
+  200    NNPDF23   6.68e-01   +4.44e-02  7.58e-01    +2.16e-02      +2.72e-02      +3.20e-02      +7.10e-02      +1.03e-01
+                              -4.44e-02              -2.16e-02      -2.72e-02      -3.20e-02      -7.30e-02      -1.05e-01
+  220    NNPDF23   5.65e-01   +3.88e-02  6.28e-01    +1.88e-02      +2.34e-02      +2.73e-02      +5.70e-02      +8.43e-02
+                              -3.88e-02              -1.88e-02      -2.34e-02      -2.73e-02      -5.90e-02      -8.63e-02
+  240    NNPDF23   4.80e-01   +3.40e-02  5.25e-01    +1.62e-02      +1.99e-02      +2.33e-02      +4.70e-02      +7.03e-02
+                              -3.40e-02              -1.62e-02      -1.99e-02      -2.33e-02      -4.80e-02      -7.13e-02
+  260    NNPDF23   4.09e-01   +2.98e-02  4.41e-01    +1.42e-02      +1.72e-02      +1.99e-02      +3.90e-02      +5.89e-02
+                              -2.98e-02              -1.42e-02      -1.72e-02      -1.99e-02      -4.00e-02      -5.99e-02
+  280    NNPDF23   3.50e-01   +2.64e-02  3.72e-01    +1.25e-02      +1.50e-02      +1.72e-02      +3.20e-02      +4.92e-02
+                              -2.64e-02              -1.25e-02      -1.50e-02      -1.72e-02      -3.40e-02      -5.12e-02
+  300    NNPDF23   3.01e-01   +2.33e-02  3.14e-01    +1.11e-02      +1.30e-02      +1.49e-02      +2.70e-02      +4.19e-02
+                              -2.33e-02              -1.11e-02      -1.30e-02      -1.49e-02      -2.80e-02      -4.29e-02
+  320    NNPDF23   2.59e-01   +2.06e-02  2.67e-01    +9.71e-03      +1.14e-02      +1.29e-02      +2.30e-02      +3.59e-02
+                              -2.06e-02              -9.71e-03      -1.14e-02      -1.29e-02      -2.30e-02      -3.59e-02
+  340    NNPDF23   2.24e-01   +1.83e-02  2.28e-01    +8.60e-03      +9.96e-03      +1.13e-02      +1.90e-02      +3.03e-02
+                              -1.83e-02              -8.60e-03      -9.96e-03      -1.13e-02      -2.00e-02      -3.13e-02
+  360    NNPDF23   1.94e-01   +1.64e-02  1.95e-01    +7.59e-03      +8.74e-03      +9.91e-03      +1.60e-02      +2.59e-02
+                              -1.64e-02              -7.59e-03      -8.74e-03      -9.91e-03      -1.70e-02      -2.69e-02
+  380    NNPDF23   1.69e-01   +1.46e-02  1.67e-01    +6.73e-03      +7.67e-03      +8.68e-03      +1.40e-02      +2.27e-02
+                              -1.46e-02              -6.73e-03      -7.67e-03      -8.68e-03      -1.40e-02      -2.27e-02
+  400    NNPDF23   1.48e-01   +1.30e-02  1.44e-01    +5.93e-03      +6.76e-03      +7.61e-03      +1.20e-02      +1.96e-02
+                              -1.30e-02              -5.93e-03      -6.76e-03      -7.61e-03      -1.20e-02      -1.96e-02
+  420    NNPDF23   1.29e-01   +1.17e-02  1.24e-01    +5.30e-03      +6.00e-03      +6.71e-03      +1.00e-02      +1.67e-02
+                              -1.17e-02              -5.30e-03      -6.00e-03      -6.71e-03      -1.00e-02      -1.67e-02
+  440    NNPDF23   1.13e-01   +1.05e-02  1.07e-01    +4.74e-03      +5.32e-03      +5.92e-03      +9.00e-03      +1.49e-02
+                              -1.05e-02              -4.74e-03      -5.32e-03      -5.92e-03      -8.80e-03      -1.47e-02
+  460    NNPDF23   9.96e-02   +9.48e-03  9.30e-02    +4.22e-03      +4.72e-03      +5.29e-03      +7.70e-03      +1.30e-02
+                              -9.48e-03              -4.22e-03      -4.72e-03      -5.29e-03      -7.90e-03      -1.32e-02
+  480    NNPDF23   8.79e-02   +8.59e-03  8.09e-02    +3.76e-03      +4.20e-03      +4.70e-03      +6.80e-03      +1.15e-02
+                              -8.59e-03              -3.76e-03      -4.20e-03      -4.70e-03      -6.80e-03      -1.15e-02
+  500    NNPDF23   7.77e-02   +7.74e-03  7.06e-02    +3.38e-03      +3.75e-03      +4.19e-03      +5.90e-03      +1.01e-02
+                              -7.74e-03              -3.38e-03      -3.75e-03      -4.19e-03      -5.90e-03      -1.01e-02
+  520    NNPDF23   6.88e-02   +7.02e-03  6.17e-02    +3.03e-03      +3.35e-03      +3.74e-03      +5.10e-03      +8.84e-03
+                              -7.02e-03              -3.03e-03      -3.35e-03      -3.74e-03      -5.20e-03      -8.94e-03
+  540    NNPDF23   6.11e-02   +6.37e-03  5.40e-02    +2.73e-03      +3.01e-03      +3.35e-03      +4.60e-03      +7.95e-03
+                              -6.37e-03              -2.73e-03      -3.01e-03      -3.35e-03      -4.40e-03      -7.75e-03
+  560    NNPDF23   5.44e-02   +5.79e-03  4.75e-02    +2.46e-03      +2.70e-03      +3.01e-03      +4.00e-03      +7.01e-03
+                              -5.79e-03              -2.46e-03      -2.70e-03      -3.01e-03      -3.90e-03      -6.91e-03
+  580    NNPDF23   4.85e-02   +5.27e-03  4.18e-02    +2.22e-03      +2.43e-03      +2.70e-03      +3.50e-03      +6.20e-03
+                              -5.27e-03              -2.22e-03      -2.43e-03      -2.70e-03      -3.50e-03      -6.20e-03
+  600    NNPDF23   4.33e-02   +4.81e-03  3.68e-02    +2.00e-03      +2.19e-03      +2.43e-03      +3.20e-03      +5.63e-03
+                              -4.81e-03              -2.00e-03      -2.19e-03      -2.43e-03      -3.00e-03      -5.43e-03
+  620    NNPDF23   3.88e-02   +4.39e-03  3.25e-02    +1.81e-03      +1.97e-03      +2.20e-03      +2.80e-03      +5.00e-03
+                              -4.39e-03              -1.81e-03      -1.97e-03      -2.20e-03      -2.70e-03      -4.90e-03
+  640    NNPDF23   3.48e-02   +4.02e-03  2.88e-02    +1.64e-03      +1.78e-03      +1.98e-03      +2.50e-03      +4.48e-03
+                              -4.02e-03              -1.64e-03      -1.78e-03      -1.98e-03      -2.30e-03      -4.28e-03
+  660    NNPDF23   3.12e-02   +3.67e-03  2.55e-02    +1.49e-03      +1.62e-03      +1.79e-03      +2.20e-03      +3.99e-03
+                              -3.67e-03              -1.49e-03      -1.62e-03      -1.79e-03      -2.00e-03      -3.79e-03
+  680    NNPDF23   2.81e-02   +3.37e-03  2.27e-02    +1.35e-03      +1.47e-03      +1.62e-03      +1.90e-03      +3.52e-03
+                              -3.37e-03              -1.35e-03      -1.47e-03      -1.62e-03      -1.80e-03      -3.42e-03
+  700    NNPDF23   2.53e-02   +3.09e-03  2.02e-02    +1.23e-03      +1.33e-03      +1.47e-03      +1.70e-03      +3.17e-03
+                              -3.09e-03              -1.23e-03      -1.33e-03      -1.47e-03      -1.70e-03      -3.17e-03
+  720    NNPDF23   2.28e-02   +2.84e-03  1.80e-02    +1.12e-03      +1.21e-03      +1.34e-03      +1.60e-03      +2.94e-03
+                              -2.84e-03              -1.12e-03      -1.21e-03      -1.34e-03      -1.40e-03      -2.74e-03
+  740    NNPDF23   2.06e-02   +2.61e-03  1.60e-02    +1.02e-03      +1.10e-03      +1.21e-03      +1.40e-03      +2.61e-03
+                              -2.61e-03              -1.02e-03      -1.10e-03      -1.21e-03      -1.40e-03      -2.61e-03
+  760    NNPDF23   1.87e-02   +2.41e-03  1.43e-02    +9.31e-04      +1.00e-03      +1.11e-03      +1.30e-03      +2.41e-03
+                              -2.41e-03              -9.31e-04      -1.00e-03      -1.11e-03      -1.20e-03      -2.31e-03
+  780    NNPDF23   1.69e-02   +2.23e-03  1.28e-02    +8.48e-04      +9.16e-04      +1.01e-03      +1.20e-03      +2.21e-03
+                              -2.23e-03              -8.48e-04      -9.16e-04      -1.01e-03      -1.00e-03      -2.01e-03
+  800    NNPDF23   1.54e-02   +2.05e-03  1.15e-02    +7.78e-04      +8.37e-04      +9.23e-04      +1.00e-03      +1.92e-03
+                              -2.05e-03              -7.78e-04      -8.37e-04      -9.23e-04      -9.00e-04      -1.82e-03
+  820    NNPDF23   1.40e-02   +1.90e-03  1.03e-02    +7.11e-04      +7.63e-04      +8.44e-04      +9.00e-04      +1.74e-03
+                              -1.90e-03              -7.11e-04      -7.63e-04      -8.44e-04      -8.90e-04      -1.73e-03
+  840    NNPDF23   1.27e-02   +1.75e-03  9.25e-03    +6.50e-04      +7.00e-04      +7.73e-04      +8.50e-04      +1.62e-03
+                              -1.75e-03              -6.50e-04      -7.00e-04      -7.73e-04      -7.90e-04      -1.56e-03
+  860    NNPDF23   1.16e-02   +1.62e-03  8.32e-03    +5.97e-04      +6.41e-04      +7.04e-04      +7.50e-04      +1.45e-03
+                              -1.62e-03              -5.97e-04      -6.41e-04      -7.04e-04      -7.10e-04      -1.41e-03
+  880    NNPDF23   1.05e-02   +1.50e-03  7.49e-03    +5.47e-04      +5.87e-04      +6.46e-04      +6.70e-04      +1.32e-03
+                              -1.50e-03              -5.47e-04      -5.87e-04      -6.46e-04      -6.40e-04      -1.29e-03
+  900    NNPDF23   9.62e-03   +1.39e-03  6.76e-03    +5.03e-04      +5.40e-04      +5.92e-04      +6.10e-04      +1.20e-03
+                              -1.39e-03              -5.03e-04      -5.40e-04      -5.92e-04      -5.80e-04      -1.17e-03
+  920    NNPDF23   8.79e-03   +1.29e-03  6.10e-03    +4.63e-04      +4.96e-04      +5.45e-04      +5.50e-04      +1.09e-03
+                              -1.29e-03              -4.63e-04      -4.96e-04      -5.45e-04      -5.30e-04      -1.07e-03
+  940    NNPDF23   8.04e-03   +1.20e-03  5.51e-03    +4.25e-04      +4.56e-04      +5.00e-04      +5.00e-04      +1.00e-03
+                              -1.20e-03              -4.25e-04      -4.56e-04      -5.00e-04      -4.90e-04      -9.90e-04
+  960    NNPDF23   7.36e-03   +1.12e-03  4.98e-03    +3.92e-04      +4.20e-04      +4.60e-04      +4.60e-04      +9.20e-04
+                              -1.12e-03              -3.92e-04      -4.20e-04      -4.60e-04      -4.40e-04      -9.00e-04
+  980    NNPDF23   6.75e-03   +1.04e-03  4.51e-03    +3.61e-04      +3.86e-04      +4.23e-04      +4.10e-04      +8.33e-04
+                              -1.04e-03              -3.61e-04      -3.86e-04      -4.23e-04      -4.00e-04      -8.23e-04
+ 1000    NNPDF23   6.19e-03   +9.69e-04  4.09e-03    +3.33e-04      +3.56e-04      +3.90e-04      +3.80e-04      +7.70e-04
+                              -9.69e-04              -3.33e-04      -3.56e-04      -3.90e-04      -3.70e-04      -7.60e-04
