@@ -18,6 +18,8 @@ TH2F *h_pdf_lo[2];
 TH2F *h_pdf_hi[2];
 TH2F *h_scale_lo[2];
 TH2F *h_scale_hi[2];
+TH2F *h_pdf_rel[2];
+TH2F *h_scale_rel[2];
 TH2F *h_tot_lo[2];
 TH2F *h_tot_hi[2];
 

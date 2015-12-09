@@ -57,9 +57,10 @@ void set_histos(){
   //  for (unsigned i=0; i<vBM.size(); i++) cout << vBBM.at(i) << " " << vBM.at(i) << " " << vBBM.at(i+1)  << endl;
 
   for (int ifs=0; ifs<2; ifs++){
-    h_xsec[ifs]=init_histos("xsec" +FS[ifs]);
-    h_pdf_lo[ifs]=init_histos("pdf_lo"+FS[ifs]);     h_pdf_hi[ifs]=init_histos("pdf_hi"+FS[ifs]);
-    h_scale_lo[ifs]=init_histos("scale_lo"+FS[ifs]);    h_scale_hi[ifs]=init_histos("scale_hi"+FS[ifs]);
+    h_xsec[ifs]=init_histos("xsec_" +FS[ifs]);
+    h_pdf_lo[ifs]=init_histos("pdf_lo_"+FS[ifs]);        h_pdf_hi[ifs]=init_histos("pdf_hi_"+FS[ifs]);
+    h_scale_lo[ifs]=init_histos("scale_lo_"+FS[ifs]);    h_scale_hi[ifs]=init_histos("scale_hi_"+FS[ifs]);
+    h_pdf_rel[ifs]=init_histos("pdf_rel_"+FS[ifs]);      h_scale_rel[ifs]=init_histos("scale_rel_"+FS[ifs]);
   }
 
   if ( nentries[0]>nentries[1] ) nentries[0]=nentries[1];
@@ -71,6 +72,8 @@ void set_histos(){
       h_pdf_hi[ifs]->Fill(mhp[ifs],tb[ifs],pdf_hi[ifs]);
       h_scale_lo[ifs]->Fill(mhp[ifs],tb[ifs],-scale_lo[ifs]);
       h_scale_hi[ifs]->Fill(mhp[ifs],tb[ifs],scale_hi[ifs]);
+      h_pdf_rel[ifs]->Fill(mhp[ifs],tb[ifs],(pdf_hi[ifs]-pdf_lo[ifs])/(2*xsec[ifs]));
+      h_scale_rel[ifs]->Fill(mhp[ifs],tb[ifs],(scale_hi[ifs]-scale_lo[ifs])/(2*xsec[ifs]));
       //      cout << mhp[ifs] << " " << tb[ifs] << " " << xsec[ifs] << endl;
     }
   }
@@ -81,6 +84,8 @@ void set_histos(){
     draw_histos(h_pdf_hi[ifs],"plots_yr4/pdf_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
     draw_histos(h_scale_lo[ifs],"plots_yr4/scale_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
     draw_histos(h_scale_hi[ifs],"plots_yr4/scale_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
+    draw_histos(h_pdf_rel[ifs],"plots_yr4/pdf_rel_2d_"+FS[ifs]+"fs.pdf",1e-3,1);
+    draw_histos(h_scale_rel[ifs],"plots_yr4/pdf_scale_2d_"+FS[ifs]+"fs.pdf",1e-3,1);
   }
 
 }

@@ -77,7 +77,8 @@ void plotmatched()
   TString scheme="NLO, ";
 
   if (ecm==8){
-    ymin=1.5e-4;  ymax=3.e-1;
+    //    ymin=1.5e-4;  ymax=3.e-1; //up to 1 TeV
+    ymin=1.0e-5;  ymax=3.e-1;
     sqrts+="8 TeV";
     scheme+="matched";
   } else if (ecm==14){
@@ -91,7 +92,7 @@ void plotmatched()
   }
 
 
-  Double_t xmin=200.00;  Double_t xmax=1000.; if (ecm==14) xmax=600.;
+  Double_t xmin=200.00;  Double_t xmax=1400.; if (ecm==14) xmax=600.;
 
   //scale var plot                                                                                                           
   const float scMASS=200;
