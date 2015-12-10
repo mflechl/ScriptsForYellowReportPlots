@@ -10,6 +10,8 @@ void plot_yr4(){
 
 void set_histos(){
 
+  const TString outdir="yr4_plots";
+
   //Get tb / mhp values
   TFile *fin[2];
   TTree *t[2];
@@ -60,7 +62,7 @@ void set_histos(){
     h_xsec[ifs]=init_histos("xsec_" +FS[ifs]);
     h_pdf_lo[ifs]=init_histos("pdf_lo_"+FS[ifs]);        h_pdf_hi[ifs]=init_histos("pdf_hi_"+FS[ifs]);
     h_scale_lo[ifs]=init_histos("scale_lo_"+FS[ifs]);    h_scale_hi[ifs]=init_histos("scale_hi_"+FS[ifs]);
-    h_pdf_rel[ifs]=init_histos("pdf_rel_"+FS[ifs]);      h_scale_rel[ifs]=init_histos("scale_rel_"+FS[ifs]);
+    h_pdf_rel[ifs]=init_histos("pdf_rel_"+FS[ifs],"relative pdf uncertainty");      h_scale_rel[ifs]=init_histos("scale_rel_"+FS[ifs],"relative scale uncertainty");
   }
 
   if ( nentries[0]>nentries[1] ) nentries[0]=nentries[1];
@@ -79,13 +81,13 @@ void set_histos(){
   }
 
   for (int ifs=0; ifs<2; ifs++){
-    draw_histos(h_xsec[ifs],"plots_yr4/xsec_2d_"+FS[ifs]+"fs.pdf",1e-5,100);
-    draw_histos(h_pdf_lo[ifs],"plots_yr4/pdf_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_pdf_hi[ifs],"plots_yr4/pdf_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_scale_lo[ifs],"plots_yr4/scale_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_scale_hi[ifs],"plots_yr4/scale_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_pdf_rel[ifs],"plots_yr4/pdf_rel_2d_"+FS[ifs]+"fs.pdf",1e-3,1);
-    draw_histos(h_scale_rel[ifs],"plots_yr4/pdf_scale_2d_"+FS[ifs]+"fs.pdf",1e-3,1);
+    draw_histos(h_xsec[ifs],outdir+"/xsec_2d_"+FS[ifs]+"fs.pdf",1e-5,100);
+    draw_histos(h_pdf_lo[ifs],outdir+"/pdf_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
+    draw_histos(h_pdf_hi[ifs],outdir+"/pdf_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
+    draw_histos(h_scale_lo[ifs],outdir+"/scale_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
+    draw_histos(h_scale_hi[ifs],outdir+"/scale_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
+    draw_histos(h_pdf_rel[ifs],outdir+"/pdf_rel_2d_"+FS[ifs]+"fs.pdf",1e-2,1.2e-1);
+    draw_histos(h_scale_rel[ifs],outdir+"/pdf_scale_2d_"+FS[ifs]+"fs.pdf",1e-2,1.2e-1);
   }
 
 }
@@ -104,8 +106,8 @@ void draw_histos(TH2F *h/*, TCanvas *c*/, TString title, float min, float max){
 
 }
 
-TH2F* init_histos(TString title){
+TH2F* init_histos(TString title, TString ztitle){
   TH2F *h= new TH2F(title,title,vBBM.size()-1,&vBBM[0],vBBT.size()-1,&vBBT[0]);
-  h->SetTitle(""); h->SetXTitle("m_{H^{-}} [GeV]"); h->SetYTitle("tan #beta"); h->SetZTitle("#sigma [pb]");
+  h->SetTitle(""); h->SetXTitle("m_{H^{-}} [GeV]"); h->SetYTitle("tan #beta"); h->SetZTitle(ztitle); //h->SetZTitle("#sigma [pb]");
   return h;
 }

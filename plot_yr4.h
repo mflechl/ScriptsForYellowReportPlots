@@ -30,4 +30,4 @@ const TString FS[2]={"4","5"};
 
 void set_histos();
 void draw_histos(TH2F *h, /*TCanvas *c,*/ TString title, float min, float max);
-TH2F* init_histos(TString title);
+TH2F* init_histos(TString title, TString ztitle="#sigma [pb]");
