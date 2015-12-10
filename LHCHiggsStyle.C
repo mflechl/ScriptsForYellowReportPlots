@@ -52,7 +52,8 @@ TStyle* LHCHiggsStyle()
   // use large fonts
   //Int_t font=72; // Helvetica italics
   Int_t font=42; // Helvetica
-  Double_t tsize=0.05;
+  //  Double_t tsize=0.05;
+  Double_t tsize=0.05; //mf
   lhchiggsStyle->SetTextFont(font);
 
   lhchiggsStyle->SetTextSize(tsize);

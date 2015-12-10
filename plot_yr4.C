@@ -1,16 +1,24 @@
 #include "plot_yr4.h"
 
+const int cwidth=800;
+const int clength=600;
+const TString outdir="yr4_plots";
+
 void plot_yr4(){
 
+  #ifdef __CINT__
+  gROOT->LoadMacro("LHCHiggsUtils.C");
+  #endif
+
   set_histos();
+
+  draw_xsec_vs_mass(30);
 
 }
 
 
 
 void set_histos(){
-
-  const TString outdir="yr4_plots";
 
   //Get tb / mhp values
   TFile *fin[2];
@@ -76,7 +84,7 @@ void set_histos(){
       h_scale_hi[ifs]->Fill(mhp[ifs],tb[ifs],scale_hi[ifs]);
       h_pdf_rel[ifs]->Fill(mhp[ifs],tb[ifs],(pdf_hi[ifs]-pdf_lo[ifs])/(2*xsec[ifs]));
       h_scale_rel[ifs]->Fill(mhp[ifs],tb[ifs],(scale_hi[ifs]-scale_lo[ifs])/(2*xsec[ifs]));
-      //      cout << mhp[ifs] << " " << tb[ifs] << " " << xsec[ifs] << endl;
+      //      if ( fabs(tb[ifs]-30)<1e-6 && ifs==0 ) cout << mhp[ifs] << "\t" << tb[ifs] << "\t" << xsec[ifs] << "\t" << -pdf_lo[ifs]-scale_lo[ifs] << "\t" << pdf_hi[ifs] + scale_hi[ifs] << endl;
     }
   }
 
@@ -92,15 +100,17 @@ void set_histos(){
 
 }
 
-void draw_histos(TH2F *h/*, TCanvas *c*/, TString title, float min, float max){
+void draw_histos(TH2F *h, TString title, float min, float max){
 
-  TCanvas *c; c = new TCanvas(h->GetName(),h->GetName());
+  TCanvas *c; c = new TCanvas(h->GetName(),h->GetName(),50,50,cwidth*10./8.,clength);
   c->SetTopMargin(0.05);
   c->SetRightMargin(0.15);
+  c->SetLeftMargin(0.10);
   c->SetLogz();
   h->Draw("cont4z");
   h->SetMinimum(min);
   h->SetMaximum(max);
+  LHCHIGGS_LABEL(0.98,0.14);
 
   gPad->SaveAs(title);
 
@@ -110,4 +120,95 @@ TH2F* init_histos(TString title, TString ztitle){
   TH2F *h= new TH2F(title,title,vBBM.size()-1,&vBBM[0],vBBT.size()-1,&vBBT[0]);
   h->SetTitle(""); h->SetXTitle("m_{H^{-}} [GeV]"); h->SetYTitle("tan #beta"); h->SetZTitle(ztitle); //h->SetZTitle("#sigma [pb]");
   return h;
+}
+
+void draw_xsec_vs_mass(float tb){
+
+  std::vector<float> xs4; xs4.resize(vBM.size());
+  std::vector<float> xs5; xs5.resize(vBM.size());
+  std::vector<float> xs;  xs.resize(vBM.size());
+
+  std::vector<float> xs4_lo; xs4_lo.resize(vBM.size());
+  std::vector<float> xs5_lo; xs5_lo.resize(vBM.size());
+  std::vector<float> xs_lo;  xs_lo.resize(vBM.size());
+
+  std::vector<float> xs4_hi; xs4_hi.resize(vBM.size());
+  std::vector<float> xs5_hi; xs5_hi.resize(vBM.size());
+  std::vector<float> xs_hi;  xs_hi.resize(vBM.size());
+
+  int iTB=-1;
+  for (unsigned i=0; i<vBBT.size()-1; i++){
+    if ( vBBT.at(i)<tb && vBBT.at(i+1)>tb ){ iTB=i+1; break; }
+  }
+
+  if (iTB<0){ std::cout << "Warning: tb value not in range!" << std::endl; return; }
+
+  for (unsigned i=0; i<vBM.size(); i++){
+    //central
+    xs4.at(i)=h_xsec[0]->GetBinContent(i+1,iTB);
+    xs5.at(i)=h_xsec[1]->GetBinContent(i+1,iTB);
+    xs.at(i)=(xs4.at(i)+xs5.at(i))/2; //TODO: Santander-matching
+
+    //total uncertainty
+    xs4_hi.at(i)=h_pdf_hi[0]->GetBinContent(i+1,iTB)+h_scale_hi[0]->GetBinContent(i+1,iTB);
+    xs4_lo.at(i)=h_pdf_lo[0]->GetBinContent(i+1,iTB)+h_scale_lo[0]->GetBinContent(i+1,iTB);
+  }
+  TGraphAsymmErrors *g_mass =new TGraphAsymmErrors(vBM.size(), &vBM[0], &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
+  TGraphAsymmErrors *g4_mass=new TGraphAsymmErrors(vBM.size(), &vBM[0], &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
+  TGraphAsymmErrors *g5_mass=new TGraphAsymmErrors(vBM.size(), &vBM[0], &xs5[0], 0, 0, &xs5_lo[0], &xs5_hi[0]);
+
+  draw_graphs(g_mass, g4_mass, g5_mass, "m_{H^{-}} [GeV]");
+
+}
+
+void draw_graphs(TGraphAsymmErrors *g_mass, TGraphAsymmErrors *g4_mass, TGraphAsymmErrors *g5_mass, TString xtitle){
+
+  TGraph *g_massL=new TGraph(*g_mass);
+
+  TCanvas *c2; c2=new TCanvas("cc","cc",50,50,cwidth,clength);
+  float xmin, xmax, ymin, ymax;
+  double *dx=g_mass->GetX(); xmin=dx[0]; xmax=dx[g_mass->GetN()-1];
+  double *dy=g_mass->GetY(); ymax=dy[0]*1.2; ymin=dy[g_mass->GetN()-1]*0.8;
+
+  TH1F *h1 = gPad->DrawFrame(xmin,ymin,xmax,ymax);
+  h1->Draw(); c2->SetLogy();
+  h1->SetYTitle("#sigma_{pp #rightarrow tH^{-}} [pb]"); h1->SetXTitle(xtitle);
+  h1->GetYaxis()->SetTitleOffset(1.5); h1->GetXaxis()->SetTitleOffset(1.3);
+  //  h1->GetXaxis()->SetLabelSize(0.045); h1->GetYaxis()->SetLabelSize(0.045);
+  h1->Draw();
+
+  myText(0.2,0.38,1,(char*)"#sqrt{s}= 13 TeV");
+  LHCHIGGS_LABEL(0.98,0.725);
+
+  g_massL->SetLineColor(kBlack);
+  g_massL->SetLineWidth(2);
+  g_mass->SetLineWidth(2);
+  g_mass->SetFillColor(kGreen);
+
+  g4_mass->SetLineColor(kRed);
+  g4_mass->SetLineWidth(2);
+  g5_mass->SetLineColor(kBlue);
+  g5_mass->SetLineWidth(2);
+
+  g_mass->Draw("3");
+  g_massL->Draw("same l");
+
+  g4_mass->Draw("same xl");
+  g5_mass->Draw("same xl");
+
+  TLegend *leg=new TLegend(0.66,0.65,0.92,0.90);
+  leg->AddEntry(g_mass,"matched","lf");
+  leg->AddEntry(g4_mass,"4FS","l");
+  leg->AddEntry(g5_mass,"5FS","l");
+  leg->SetFillColor(10);
+  leg->SetShadowColor(10);
+  leg->SetLineColor(10);
+  leg->Draw();
+
+  gPad->RedrawAxis();
+
+  gPad->SaveAs(outdir+"/xsec_tb30.pdf");
+
+  //  for (unsigned i=0; i<vBM.size(); i++) std::cout << vBM.at(i) << "\t" << xs4.at(i) << "\t -" << xs4_lo.at(i) << "\t +" << xs4_hi.at(i) << "\t XX" << std::endl;
+
 }

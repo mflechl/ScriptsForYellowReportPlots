@@ -6,6 +6,11 @@
 #include "TFile.h"
 #include "TTree.h"
 #include "TCanvas.h"
+#include "TGraphAsymmErrors.h"
+#include "TLegend.h"
+//#include "TPad.h"
+
+#include "LHCHiggsUtils.C"
 
 std::vector<float> vBM;
 std::vector<float> vBBM;
@@ -31,3 +36,6 @@ const TString FS[2]={"4","5"};
 void set_histos();
 void draw_histos(TH2F *h, /*TCanvas *c,*/ TString title, float min, float max);
 TH2F* init_histos(TString title, TString ztitle="#sigma [pb]");
+
+void draw_xsec_vs_mass(float tb);
+void draw_graphs(TGraphAsymmErrors *g_mass, TGraphAsymmErrors *g4_mass, TGraphAsymmErrors *g5_mass, TString xtitle);
