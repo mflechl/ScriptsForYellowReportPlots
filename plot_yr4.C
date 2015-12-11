@@ -12,7 +12,10 @@ void plot_yr4(){
 
   set_histos();
 
-  draw_xsec_vs_mass(30);
+  draw_xsec(1);
+  draw_xsec(10);
+  draw_xsec(30);
+  draw_xsec(300,1);
 
 }
 
@@ -122,55 +125,83 @@ TH2F* init_histos(TString title, TString ztitle){
   return h;
 }
 
-void draw_xsec_vs_mass(float tb){
+void draw_xsec(const float param, const int VS_TB){
 
-  std::vector<float> xs4; xs4.resize(vBM.size());
-  std::vector<float> xs5; xs5.resize(vBM.size());
-  std::vector<float> xs;  xs.resize(vBM.size());
+  unsigned vsize=vBM.size();
+  if (VS_TB) vsize=vBT.size();
 
-  std::vector<float> xs4_lo; xs4_lo.resize(vBM.size());
-  std::vector<float> xs5_lo; xs5_lo.resize(vBM.size());
-  std::vector<float> xs_lo;  xs_lo.resize(vBM.size());
+  std::vector<float> xs4; xs4.resize(vsize);
+  std::vector<float> xs5; xs5.resize(vsize);
+  std::vector<float> xs;  xs.resize(vsize);
 
-  std::vector<float> xs4_hi; xs4_hi.resize(vBM.size());
-  std::vector<float> xs5_hi; xs5_hi.resize(vBM.size());
-  std::vector<float> xs_hi;  xs_hi.resize(vBM.size());
+  std::vector<float> xs4_lo; xs4_lo.resize(vsize);
+  std::vector<float> xs5_lo; xs5_lo.resize(vsize);
+  std::vector<float> xs_lo;  xs_lo.resize(vsize);
+
+  std::vector<float> xs4_hi; xs4_hi.resize(vsize);
+  std::vector<float> xs5_hi; xs5_hi.resize(vsize);
+  std::vector<float> xs_hi;  xs_hi.resize(vsize);
 
   int iTB=-1;
-  for (unsigned i=0; i<vBBT.size()-1; i++){
-    if ( vBBT.at(i)<tb && vBBT.at(i+1)>tb ){ iTB=i+1; break; }
+  int iMH=-1;
+
+  if (VS_TB){
+    for (unsigned i=0; i<vBBM.size()-1; i++){
+      if ( vBBM.at(i)<param && vBBM.at(i+1)>param ){ iMH=i+1; break; }
+    }
+    if (iMH<0){ std::cout << "Warning: mhp value not in range!" << std::endl; return; }
+  } else{
+    for (unsigned i=0; i<vBBT.size()-1; i++){
+      if ( vBBT.at(i)<param && vBBT.at(i+1)>param ){ iTB=i+1; break; }
+    }
+    if (iTB<0){ std::cout << "Warning: tb value not in range!" << std::endl; return; }
   }
 
-  if (iTB<0){ std::cout << "Warning: tb value not in range!" << std::endl; return; }
+  for (unsigned i=0; i<vsize; i++){
+    if (VS_TB) iTB=i+1; else iMH=i+1;
 
-  for (unsigned i=0; i<vBM.size(); i++){
     //central
-    xs4.at(i)=h_xsec[0]->GetBinContent(i+1,iTB);
-    xs5.at(i)=h_xsec[1]->GetBinContent(i+1,iTB);
+    xs4.at(i)=h_xsec[0]->GetBinContent(iMH,iTB);
+    xs5.at(i)=h_xsec[1]->GetBinContent(iMH,iTB);
     xs.at(i)=(xs4.at(i)+xs5.at(i))/2; //TODO: Santander-matching
 
     //total uncertainty
-    xs4_hi.at(i)=h_pdf_hi[0]->GetBinContent(i+1,iTB)+h_scale_hi[0]->GetBinContent(i+1,iTB);
-    xs4_lo.at(i)=h_pdf_lo[0]->GetBinContent(i+1,iTB)+h_scale_lo[0]->GetBinContent(i+1,iTB);
+    xs4_hi.at(i)=h_pdf_hi[0]->GetBinContent(iMH,iTB)+h_scale_hi[0]->GetBinContent(iMH,iTB);
+    xs4_lo.at(i)=h_pdf_lo[0]->GetBinContent(iMH,iTB)+h_scale_lo[0]->GetBinContent(iMH,iTB);
   }
-  TGraphAsymmErrors *g_mass =new TGraphAsymmErrors(vBM.size(), &vBM[0], &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
-  TGraphAsymmErrors *g4_mass=new TGraphAsymmErrors(vBM.size(), &vBM[0], &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
-  TGraphAsymmErrors *g5_mass=new TGraphAsymmErrors(vBM.size(), &vBM[0], &xs5[0], 0, 0, &xs5_lo[0], &xs5_hi[0]);
+  float* x;
+  if (VS_TB) x=&vBT[0]; else x=&vBM[0];
+  TGraphAsymmErrors *g_param =new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
+  TGraphAsymmErrors *g4_param=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
+  TGraphAsymmErrors *g5_param=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_lo[0], &xs5_hi[0]);
 
-  draw_graphs(g_mass, g4_mass, g5_mass, "m_{H^{-}} [GeV]");
+  TString title="xsec_";
+  if (VS_TB){ title+="mhp_"; title+=param; }
+  else { title+="tb_"; title+=param; }
+
+  TString xtitle="m_{H^{-}} [GeV]"; if (VS_TB) xtitle="tan #beta";
+  draw_graphs(g_param, g4_param, g5_param, title, xtitle);
 
 }
 
-void draw_graphs(TGraphAsymmErrors *g_mass, TGraphAsymmErrors *g4_mass, TGraphAsymmErrors *g5_mass, TString xtitle){
+void draw_graphs(TGraphAsymmErrors *g_param, TGraphAsymmErrors *g4_param, TGraphAsymmErrors *g5_param, TString title, TString xtitle){
 
-  TGraph *g_massL=new TGraph(*g_mass);
+  TGraph *g_paramL=new TGraph(*g_param);
 
-  TCanvas *c2; c2=new TCanvas("cc","cc",50,50,cwidth,clength);
-  float xmin, xmax, ymin, ymax;
-  double *dx=g_mass->GetX(); xmin=dx[0]; xmax=dx[g_mass->GetN()-1];
-  double *dy=g_mass->GetY(); ymax=dy[0]*1.2; ymin=dy[g_mass->GetN()-1]*0.8;
+  TCanvas *c2; c2=new TCanvas(title,title,50,50,cwidth,clength);
+  float xmin, xmax, ymin=1e16, ymax=0;
+  double *dx=g_param->GetX(); xmin=dx[0]; xmax=dx[g_param->GetN()-1];
+
+  double *dy=g_param->GetY();
+  for (int i=0; i<g_param->GetN(); i++){
+    if (ymin>dy[i]) ymin=dy[i];
+    if (ymax<dy[i]) ymax=dy[i];
+    //    std::cout << dx[i] << "\t" << ymin << "\t" << ymax << std::endl;
+  }
+  ymax*=1.2; ymin*=0.8;
 
   TH1F *h1 = gPad->DrawFrame(xmin,ymin,xmax,ymax);
+
   h1->Draw(); c2->SetLogy();
   h1->SetYTitle("#sigma_{pp #rightarrow tH^{-}} [pb]"); h1->SetXTitle(xtitle);
   h1->GetYaxis()->SetTitleOffset(1.5); h1->GetXaxis()->SetTitleOffset(1.3);
@@ -180,26 +211,26 @@ void draw_graphs(TGraphAsymmErrors *g_mass, TGraphAsymmErrors *g4_mass, TGraphAs
   myText(0.2,0.38,1,(char*)"#sqrt{s}= 13 TeV");
   LHCHIGGS_LABEL(0.98,0.725);
 
-  g_massL->SetLineColor(kBlack);
-  g_massL->SetLineWidth(2);
-  g_mass->SetLineWidth(2);
-  g_mass->SetFillColor(kGreen);
+  g_paramL->SetLineColor(kBlack);
+  g_paramL->SetLineWidth(2);
+  g_param->SetLineWidth(2);
+  g_param->SetFillColor(kGreen);
 
-  g4_mass->SetLineColor(kRed);
-  g4_mass->SetLineWidth(2);
-  g5_mass->SetLineColor(kBlue);
-  g5_mass->SetLineWidth(2);
+  g4_param->SetLineColor(kRed);
+  g4_param->SetLineWidth(2);
+  g5_param->SetLineColor(kBlue);
+  g5_param->SetLineWidth(2);
 
-  g_mass->Draw("3");
-  g_massL->Draw("same l");
+  g_param->Draw("3");
+  g_paramL->Draw("same l");
 
-  g4_mass->Draw("same xl");
-  g5_mass->Draw("same xl");
+  g4_param->Draw("same xl");
+  g5_param->Draw("same xl");
 
   TLegend *leg=new TLegend(0.66,0.65,0.92,0.90);
-  leg->AddEntry(g_mass,"matched","lf");
-  leg->AddEntry(g4_mass,"4FS","l");
-  leg->AddEntry(g5_mass,"5FS","l");
+  leg->AddEntry(g_param,"matched","lf");
+  leg->AddEntry(g4_param,"4FS","l");
+  leg->AddEntry(g5_param,"5FS","l");
   leg->SetFillColor(10);
   leg->SetShadowColor(10);
   leg->SetLineColor(10);
@@ -207,7 +238,7 @@ void draw_graphs(TGraphAsymmErrors *g_mass, TGraphAsymmErrors *g4_mass, TGraphAs
 
   gPad->RedrawAxis();
 
-  gPad->SaveAs(outdir+"/xsec_tb30.pdf");
+  gPad->SaveAs(outdir+title+".pdf");
 
   //  for (unsigned i=0; i<vBM.size(); i++) std::cout << vBM.at(i) << "\t" << xs4.at(i) << "\t -" << xs4_lo.at(i) << "\t +" << xs4_hi.at(i) << "\t XX" << std::endl;
 
