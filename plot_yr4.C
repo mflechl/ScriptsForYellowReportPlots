@@ -157,21 +157,32 @@ void draw_xsec(const float param, const int VS_TB){
     if (iTB<0){ std::cout << "Warning: tb value not in range!" << std::endl; return; }
   }
 
+  const float mb=4.75;
   for (unsigned i=0; i<vsize; i++){
     if (VS_TB) iTB=i+1; else iMH=i+1;
+
+    float w=log(vBM.at(iMH-1)/mb)-2;
+    cout << vBM.at(iMH-1) << "\t" << param << endl;
 
     //central
     xs4.at(i)=h_xsec[0]->GetBinContent(iMH,iTB);
     xs5.at(i)=h_xsec[1]->GetBinContent(iMH,iTB);
-    xs.at(i)=(xs4.at(i)+xs5.at(i))/2; //TODO: Santander-matching
+    xs.at(i)=(xs4.at(i)+w*xs5.at(i))/(1+w);
+    //    xs.at(i)=(xs4.at(i)+xs5.at(i))/2; //TODO: Santander-matching
 
     //total uncertainty
     xs4_hi.at(i)=h_pdf_hi[0]->GetBinContent(iMH,iTB)+h_scale_hi[0]->GetBinContent(iMH,iTB);
     xs4_lo.at(i)=h_pdf_lo[0]->GetBinContent(iMH,iTB)+h_scale_lo[0]->GetBinContent(iMH,iTB);
+    xs5_hi.at(i)=h_pdf_hi[1]->GetBinContent(iMH,iTB)+h_scale_hi[1]->GetBinContent(iMH,iTB);
+    xs5_lo.at(i)=h_pdf_lo[1]->GetBinContent(iMH,iTB)+h_scale_lo[1]->GetBinContent(iMH,iTB);
+
+    xs_lo.at(i)=(xs4_lo.at(i)+w*xs5_lo.at(i))/(1+w);
+    xs_hi.at(i)=(xs4_hi.at(i)+w*xs5_hi.at(i))/(1+w);
+
   }
   float* x;
   if (VS_TB) x=&vBT[0]; else x=&vBM[0];
-  TGraphAsymmErrors *g_param =new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
+  TGraphAsymmErrors *g_param =new TGraphAsymmErrors(vsize, x, &xs[0], 0, 0, &xs_lo[0], &xs_hi[0]);
   TGraphAsymmErrors *g4_param=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
   TGraphAsymmErrors *g5_param=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_lo[0], &xs5_hi[0]);
 
@@ -238,7 +249,7 @@ void draw_graphs(TGraphAsymmErrors *g_param, TGraphAsymmErrors *g4_param, TGraph
 
   gPad->RedrawAxis();
 
-  gPad->SaveAs(outdir+title+".pdf");
+  gPad->SaveAs(outdir+"/"+title+".pdf");
 
   //  for (unsigned i=0; i<vBM.size(); i++) std::cout << vBM.at(i) << "\t" << xs4.at(i) << "\t -" << xs4_lo.at(i) << "\t +" << xs4_hi.at(i) << "\t XX" << std::endl;
 

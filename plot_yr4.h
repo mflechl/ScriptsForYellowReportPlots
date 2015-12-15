@@ -28,7 +28,7 @@ TH2F *h_scale_rel[2];
 TH2F *h_tot_lo[2];
 TH2F *h_tot_hi[2];
 
-const TString FNAME[2]={"input_yr4/5F_total_results_13TeV.root","input_yr4/5F_total_results_13TeV.root"};
+const TString FNAME[2]={"input_yr4/4f_13tev.root","input_yr4/5f_13tev.root"};
 
 const TString FS[2]={"4","5"};
 
