@@ -162,7 +162,7 @@ void draw_xsec(const float param, const int VS_TB){
     if (VS_TB) iTB=i+1; else iMH=i+1;
 
     float w=log(vBM.at(iMH-1)/mb)-2;
-    cout << vBM.at(iMH-1) << "\t" << param << endl;
+    //    cout << vBM.at(iMH-1) << "\t" << param << endl;
 
     //central
     xs4.at(i)=h_xsec[0]->GetBinContent(iMH,iTB);
