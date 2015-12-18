@@ -37,5 +37,6 @@ void set_histos();
 void draw_histos(TH2F *h, /*TCanvas *c,*/ TString title, float min, float max);
 TH2F* init_histos(TString title, TString ztitle="#sigma [pb]");
 
-void draw_xsec(float param, const int VS_TB=0);
-void draw_graphs(TGraphAsymmErrors *g_mass, TGraphAsymmErrors *g4_mass, TGraphAsymmErrors *g5_mass, TString title, TString xtitle);
+void draw_xsec(float param, const int VS_TB=0,const TString scheme="");
+void draw_graphs(TGraphAsymmErrors *g_mass, TGraphAsymmErrors *g4_mass, TGraphAsymmErrors *g5_mass, TString title, TString xtitle, TString ptext="");
+void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_pdf, TString title, TString xtitle, TString ptext);

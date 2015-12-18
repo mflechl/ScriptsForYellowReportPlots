@@ -13,9 +13,15 @@ void plot_yr4(){
   set_histos();
 
   draw_xsec(1);
-  draw_xsec(10);
+  draw_xsec(8);
   draw_xsec(30);
-  draw_xsec(300,1);
+  draw_xsec(200,1);
+  draw_xsec(600,1);
+  draw_xsec(1000,1);
+  draw_xsec(2000,1);
+
+  draw_xsec(30,0,"4FS");
+  draw_xsec(30,0,"5FS");
 
 }
 
@@ -98,7 +104,7 @@ void set_histos(){
     draw_histos(h_scale_lo[ifs],outdir+"/scale_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
     draw_histos(h_scale_hi[ifs],outdir+"/scale_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
     draw_histos(h_pdf_rel[ifs],outdir+"/pdf_rel_2d_"+FS[ifs]+"fs.pdf",1e-2,1.2e-1);
-    draw_histos(h_scale_rel[ifs],outdir+"/pdf_scale_2d_"+FS[ifs]+"fs.pdf",1e-2,1.2e-1);
+    draw_histos(h_scale_rel[ifs],outdir+"/pdf_scale_2d_"+FS[ifs]+"fs.pdf",1.2e-1-ifs*1.1e-1,2.5e-1-ifs*1.3e-1); //0.12 0.25 : 0.01 0.12
   }
 
 }
@@ -125,7 +131,7 @@ TH2F* init_histos(TString title, TString ztitle){
   return h;
 }
 
-void draw_xsec(const float param, const int VS_TB){
+void draw_xsec(const float param, const int VS_TB, const TString scheme){
 
   unsigned vsize=vBM.size();
   if (VS_TB) vsize=vBT.size();
@@ -186,30 +192,73 @@ void draw_xsec(const float param, const int VS_TB){
   TGraphAsymmErrors *g4_param=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
   TGraphAsymmErrors *g5_param=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_lo[0], &xs5_hi[0]);
 
+  TString ptext;
   TString title="xsec_";
-  if (VS_TB){ title+="mhp_"; title+=param; }
-  else { title+="tb_"; title+=param; }
+  if (VS_TB){ title+="mhp_"; title+=param; ptext="m_{H^{-}}="; ptext+=param; ptext+=" GeV"; }
+  else { title+="tb_"; title+=param; ptext="tan #beta="; ptext+=param;}
 
   TString xtitle="m_{H^{-}} [GeV]"; if (VS_TB) xtitle="tan #beta";
-  draw_graphs(g_param, g4_param, g5_param, title, xtitle);
+
+  if ( scheme=="" ){
+    draw_graphs(g_param, g4_param, g5_param, title, xtitle, ptext);
+  } else if ( scheme=="4FS" ){
+    draw_graphs_scheme(g4_param, g4_param, scheme, xtitle, ptext);
+  } else if ( scheme=="5FS" ){
+    draw_graphs_scheme(g5_param, g5_param, scheme, xtitle, ptext);
+  }
+}
+
+void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_pdf, TString title, TString xtitle, TString ptext){
 
 }
 
-void draw_graphs(TGraphAsymmErrors *g_param, TGraphAsymmErrors *g4_param, TGraphAsymmErrors *g5_param, TString title, TString xtitle){
+void draw_graphs(TGraphAsymmErrors *g_param, TGraphAsymmErrors *g4_param, TGraphAsymmErrors *g5_param, TString title, TString xtitle, TString ptext){
 
   TGraph *g_paramL=new TGraph(*g_param);
 
-  TCanvas *c2; c2=new TCanvas(title,title,50,50,cwidth,clength);
   float xmin, xmax, ymin=1e16, ymax=0;
-  double *dx=g_param->GetX(); xmin=dx[0]; xmax=dx[g_param->GetN()-1];
 
-  double *dy=g_param->GetY();
+  int np=g5_param->GetN();
+  double *dx=new double[np]; dx=g_param->GetX(); xmin=dx[0]; xmax=dx[g_param->GetN()-1];
+  double *dy=new double[np]; dy=g_param->GetY();
+
+  double *g4l=new double[np];
+  double *g4h=new double[np];
+  double *g4=new double[np];
+  double *line_g4l=new double[np];
+  double *line_g4h=new double[np];
+  g4=g4_param->GetY();
+  g4l=g4_param->GetEYlow();
+  g4h=g4_param->GetEYhigh();
+
+  double *g5l=new double[np];
+  double *g5h=new double[np];
+  double *g5=new double[np];
+  double *line_g5l=new double[np];
+  double *line_g5h=new double[np];
+  g5=g5_param->GetY();
+  g5l=g5_param->GetEYlow();
+  g5h=g5_param->GetEYhigh();
+
+  for (int i=0; i<np; i++){
+    line_g4l[i]=g4[i]-g4l[i];
+    line_g4h[i]=g4[i]+g4h[i];
+    line_g5l[i]=g5[i]-g5l[i];
+    line_g5h[i]=g5[i]+g5h[i];
+  }
+  TGraph *g4l_param=new TGraph(np, dx, line_g4l);
+  TGraph *g4h_param=new TGraph(np, dx, line_g4h);
+  TGraph *g5l_param=new TGraph(np, dx, line_g5l);
+  TGraph *g5h_param=new TGraph(np, dx, line_g5h);
+
+
+  TCanvas *c2; c2=new TCanvas(title,title,50,50,cwidth,clength);
   for (int i=0; i<g_param->GetN(); i++){
     if (ymin>dy[i]) ymin=dy[i];
     if (ymax<dy[i]) ymax=dy[i];
     //    std::cout << dx[i] << "\t" << ymin << "\t" << ymax << std::endl;
   }
-  ymax*=1.2; ymin*=0.8;
+  ymax*=1.2; ymin*=0.5;
 
   TH1F *h1 = gPad->DrawFrame(xmin,ymin,xmax,ymax);
 
@@ -219,7 +268,8 @@ void draw_graphs(TGraphAsymmErrors *g_param, TGraphAsymmErrors *g4_param, TGraph
   //  h1->GetXaxis()->SetLabelSize(0.045); h1->GetYaxis()->SetLabelSize(0.045);
   h1->Draw();
 
-  myText(0.2,0.38,1,(char*)"#sqrt{s}= 13 TeV");
+  myText(0.2,0.45,1,(char*)"#sqrt{s}= 13 TeV");
+  myText(0.2,0.38,1,(char *)ptext.Data());
   LHCHIGGS_LABEL(0.98,0.725);
 
   g_paramL->SetLineColor(kBlack);
@@ -235,8 +285,23 @@ void draw_graphs(TGraphAsymmErrors *g_param, TGraphAsymmErrors *g4_param, TGraph
   g_param->Draw("3");
   g_paramL->Draw("same l");
 
+  g4l_param->SetLineStyle(7);
+  g4l_param->SetLineColor(kRed);
+  g4h_param->SetLineStyle(7);
+  g4h_param->SetLineColor(kRed);
+
+  g5l_param->SetLineStyle(7);
+  g5l_param->SetLineColor(kBlue);
+  g5h_param->SetLineStyle(7);
+  g5h_param->SetLineColor(kBlue);
+
   g4_param->Draw("same xl");
+  g4l_param->Draw("same l");
+  g4h_param->Draw("same l");
+
   g5_param->Draw("same xl");
+  g5l_param->Draw("same l");
+  g5h_param->Draw("same l");
 
   TLegend *leg=new TLegend(0.66,0.65,0.92,0.90);
   leg->AddEntry(g_param,"matched","lf");
