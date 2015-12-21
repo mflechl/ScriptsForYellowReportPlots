@@ -143,16 +143,22 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
   std::vector<float> xs;  xs.resize(vsize);
 
   std::vector<float> xs4_lo; xs4_lo.resize(vsize);
-  std::vector<float> xs4_pdf_lo; xs4_pdf_lo.resize(vsize);
   std::vector<float> xs5_lo; xs5_lo.resize(vsize);
-  std::vector<float> xs5_pdf_lo; xs5_pdf_lo.resize(vsize);
   std::vector<float> xs_lo;  xs_lo.resize(vsize);
 
   std::vector<float> xs4_hi; xs4_hi.resize(vsize);
-  std::vector<float> xs4_pdf_hi; xs4_pdf_hi.resize(vsize);
   std::vector<float> xs5_hi; xs5_hi.resize(vsize);
-  std::vector<float> xs5_pdf_hi; xs5_pdf_hi.resize(vsize);
   std::vector<float> xs_hi;  xs_hi.resize(vsize);
+
+  std::vector<float> xs4_pdf_lo; xs4_pdf_lo.resize(vsize);
+  std::vector<float> xs4_pdf_hi; xs4_pdf_hi.resize(vsize);
+  std::vector<float> xs5_pdf_lo; xs5_pdf_lo.resize(vsize);
+  std::vector<float> xs5_pdf_hi; xs5_pdf_hi.resize(vsize);
+
+  std::vector<float> xs4_scale_lo; xs4_scale_lo.resize(vsize);
+  std::vector<float> xs4_scale_hi; xs4_scale_hi.resize(vsize);
+  std::vector<float> xs5_scale_lo; xs5_scale_lo.resize(vsize);
+  std::vector<float> xs5_scale_hi; xs5_scale_hi.resize(vsize);
 
   int iTB=-1;
   int iMH=-1;
@@ -187,10 +193,14 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
     xs4_lo.at(i)=h_pdf_lo[0]->GetBinContent(iMH,iTB)+h_scale_lo[0]->GetBinContent(iMH,iTB);
     xs4_pdf_hi.at(i)=h_pdf_hi[0]->GetBinContent(iMH,iTB);
     xs4_pdf_lo.at(i)=h_pdf_lo[0]->GetBinContent(iMH,iTB);
+    xs4_scale_hi.at(i)=h_scale_hi[0]->GetBinContent(iMH,iTB);
+    xs4_scale_lo.at(i)=h_scale_lo[0]->GetBinContent(iMH,iTB);
     xs5_hi.at(i)=h_pdf_hi[1]->GetBinContent(iMH,iTB)+h_scale_hi[1]->GetBinContent(iMH,iTB);
     xs5_lo.at(i)=h_pdf_lo[1]->GetBinContent(iMH,iTB)+h_scale_lo[1]->GetBinContent(iMH,iTB);
     xs5_pdf_hi.at(i)=h_pdf_hi[1]->GetBinContent(iMH,iTB);
     xs5_pdf_lo.at(i)=h_pdf_lo[1]->GetBinContent(iMH,iTB);
+    xs5_scale_hi.at(i)=h_scale_hi[1]->GetBinContent(iMH,iTB);
+    xs5_scale_lo.at(i)=h_scale_lo[1]->GetBinContent(iMH,iTB);
 
     xs_lo.at(i)=(xs4_lo.at(i)+w*xs5_lo.at(i))/(1+w);
     xs_hi.at(i)=(xs4_hi.at(i)+w*xs5_hi.at(i))/(1+w);
@@ -204,6 +214,8 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
 
   TGraphAsymmErrors *g4_pdf=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_pdf_lo[0], &xs4_pdf_hi[0]);
   TGraphAsymmErrors *g5_pdf=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_pdf_lo[0], &xs5_pdf_hi[0]);
+  TGraphAsymmErrors *g4_scale=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_scale_lo[0], &xs4_scale_hi[0]);
+  TGraphAsymmErrors *g5_scale=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_scale_lo[0], &xs5_scale_hi[0]);
 
   TString ptext;
   TString title="xsec_";
@@ -217,13 +229,13 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
   if ( scheme=="" ){
     draw_graphs(g_param, g4_param, g5_param, title, xtitle, ptext);
   } else if ( scheme=="4FS" ){
-    draw_graphs_scheme(g4_param, g4_pdf, title, xtitle, ptext);
+    draw_graphs_scheme(g4_param, g4_scale, title, xtitle, ptext);
   } else if ( scheme=="5FS" ){
-    draw_graphs_scheme(g5_param, g5_pdf, title, xtitle, ptext);
+    draw_graphs_scheme(g5_param, g5_scale, title, xtitle, ptext);
   }
 }
 
-void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_pdf, TString title, TString xtitle, TString ptext){
+void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_scale, TString title, TString xtitle, TString ptext){
 
   TGraph *g_totL=new TGraph(*g_tot);
 
@@ -238,17 +250,17 @@ void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_pdf, TStr
   double *g=new double[np];
   double *line_gl=new double[np];
   double *line_gh=new double[np];
-  g=g_pdf->GetY();
-  gl=g_pdf->GetEYlow();
-  gh=g_pdf->GetEYhigh();
+  g=g_scale->GetY();
+  gl=g_scale->GetEYlow();
+  gh=g_scale->GetEYhigh();
 
   for (int i=0; i<np; i++){
     line_gl[i]=g[i]-gl[i];
     line_gh[i]=g[i]+gh[i];
     cout << i << "\t" << g[i] << "\t" << line_gl[i] << "\t" << line_gh[i] << endl;
   }
-  TGraph *gl_pdf=new TGraph(np, dx, line_gl);
-  TGraph *gh_pdf=new TGraph(np, dx, line_gh);
+  TGraph *gl_scale=new TGraph(np, dx, line_gl);
+  TGraph *gh_scale=new TGraph(np, dx, line_gh);
 
 
   TCanvas *c2; c2=new TCanvas(title,title,50,50,cwidth,clength);
@@ -277,18 +289,18 @@ void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_pdf, TStr
   g_tot->SetLineColor(kBlack);
   g_tot->SetFillColor(kGreen);
 
-  g_pdf->SetLineColor(kRed);
-  g_pdf->SetLineWidth(2);
+  g_scale->SetLineColor(kRed);
+  g_scale->SetLineWidth(2);
   //  g5_param->SetLineColor(kBlue);
   //  g5_param->SetLineWidth(2);
 
   g_tot->Draw("3");
   g_totL->Draw("same l");
 
-  gl_pdf->SetLineStyle(7);
-  gl_pdf->SetLineColor(kRed);
-  gh_pdf->SetLineStyle(7);
-  gh_pdf->SetLineColor(kRed);
+  gl_scale->SetLineStyle(7);
+  gl_scale->SetLineColor(kRed);
+  gh_scale->SetLineStyle(7);
+  gh_scale->SetLineColor(kRed);
 
   /*
   g5l_param->SetLineStyle(7);
@@ -297,9 +309,9 @@ void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_pdf, TStr
   g5h_param->SetLineColor(kBlue);
   */
 
-  //  g_pdf->Draw("same xl");
-  gl_pdf->Draw("same l");
-  gh_pdf->Draw("same l");
+  //  g_scale->Draw("same xl");
+  gl_scale->Draw("same l");
+  gh_scale->Draw("same l");
 
   /*
   g5_param->Draw("same xl");
@@ -309,7 +321,7 @@ void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_pdf, TStr
 
   TLegend *leg=new TLegend(0.66,0.65,0.92,0.90);
   leg->AddEntry(g_tot,"central","l");
-  leg->AddEntry(gl_pdf,"PDF #pm1 #sigma","l");
+  leg->AddEntry(gl_scale,"scale #pm1 #sigma","l");
   leg->AddEntry(g_tot,"total #pm1 #sigma","lf");
   //  leg->AddEntry(g5_param,"5FS","l");
   leg->SetFillColor(10);
