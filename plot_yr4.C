@@ -12,6 +12,7 @@ void plot_yr4(){
 
   set_histos();
 
+  /*
   draw_xsec(1);
   draw_xsec(8);
   draw_xsec(30);
@@ -19,6 +20,7 @@ void plot_yr4(){
   draw_xsec(600,1);
   draw_xsec(1000,1);
   draw_xsec(2000,1);
+  */
 
   draw_xsec(30,0,"4FS");
   draw_xsec(30,0,"5FS");
@@ -141,11 +143,15 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
   std::vector<float> xs;  xs.resize(vsize);
 
   std::vector<float> xs4_lo; xs4_lo.resize(vsize);
+  std::vector<float> xs4_pdf_lo; xs4_pdf_lo.resize(vsize);
   std::vector<float> xs5_lo; xs5_lo.resize(vsize);
+  std::vector<float> xs5_pdf_lo; xs5_pdf_lo.resize(vsize);
   std::vector<float> xs_lo;  xs_lo.resize(vsize);
 
   std::vector<float> xs4_hi; xs4_hi.resize(vsize);
+  std::vector<float> xs4_pdf_hi; xs4_pdf_hi.resize(vsize);
   std::vector<float> xs5_hi; xs5_hi.resize(vsize);
+  std::vector<float> xs5_pdf_hi; xs5_pdf_hi.resize(vsize);
   std::vector<float> xs_hi;  xs_hi.resize(vsize);
 
   int iTB=-1;
@@ -179,8 +185,12 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
     //total uncertainty
     xs4_hi.at(i)=h_pdf_hi[0]->GetBinContent(iMH,iTB)+h_scale_hi[0]->GetBinContent(iMH,iTB);
     xs4_lo.at(i)=h_pdf_lo[0]->GetBinContent(iMH,iTB)+h_scale_lo[0]->GetBinContent(iMH,iTB);
+    xs4_pdf_hi.at(i)=h_pdf_hi[0]->GetBinContent(iMH,iTB);
+    xs4_pdf_lo.at(i)=h_pdf_lo[0]->GetBinContent(iMH,iTB);
     xs5_hi.at(i)=h_pdf_hi[1]->GetBinContent(iMH,iTB)+h_scale_hi[1]->GetBinContent(iMH,iTB);
     xs5_lo.at(i)=h_pdf_lo[1]->GetBinContent(iMH,iTB)+h_scale_lo[1]->GetBinContent(iMH,iTB);
+    xs5_pdf_hi.at(i)=h_pdf_hi[1]->GetBinContent(iMH,iTB);
+    xs5_pdf_lo.at(i)=h_pdf_lo[1]->GetBinContent(iMH,iTB);
 
     xs_lo.at(i)=(xs4_lo.at(i)+w*xs5_lo.at(i))/(1+w);
     xs_hi.at(i)=(xs4_hi.at(i)+w*xs5_hi.at(i))/(1+w);
@@ -192,6 +202,9 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
   TGraphAsymmErrors *g4_param=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
   TGraphAsymmErrors *g5_param=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_lo[0], &xs5_hi[0]);
 
+  TGraphAsymmErrors *g4_pdf=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_pdf_lo[0], &xs4_pdf_hi[0]);
+  TGraphAsymmErrors *g5_pdf=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_pdf_lo[0], &xs5_pdf_hi[0]);
+
   TString ptext;
   TString title="xsec_";
   if (VS_TB){ title+="mhp_"; title+=param; ptext="m_{H^{-}}="; ptext+=param; ptext+=" GeV"; }
@@ -199,16 +212,114 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
 
   TString xtitle="m_{H^{-}} [GeV]"; if (VS_TB) xtitle="tan #beta";
 
+  if ( !(scheme=="") ) title+="_"+scheme;
+
   if ( scheme=="" ){
     draw_graphs(g_param, g4_param, g5_param, title, xtitle, ptext);
   } else if ( scheme=="4FS" ){
-    draw_graphs_scheme(g4_param, g4_param, scheme, xtitle, ptext);
+    draw_graphs_scheme(g4_param, g4_pdf, title, xtitle, ptext);
   } else if ( scheme=="5FS" ){
-    draw_graphs_scheme(g5_param, g5_param, scheme, xtitle, ptext);
+    draw_graphs_scheme(g5_param, g5_pdf, title, xtitle, ptext);
   }
 }
 
 void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_pdf, TString title, TString xtitle, TString ptext){
+
+  TGraph *g_totL=new TGraph(*g_tot);
+
+  float xmin, xmax, ymin=1e16, ymax=0;
+
+  int np=g_tot->GetN();
+  double *dx=new double[np]; dx=g_tot->GetX(); xmin=dx[0]; xmax=dx[g_tot->GetN()-1];
+  double *dy=new double[np]; dy=g_tot->GetY();
+
+  double *gl=new double[np];
+  double *gh=new double[np];
+  double *g=new double[np];
+  double *line_gl=new double[np];
+  double *line_gh=new double[np];
+  g=g_pdf->GetY();
+  gl=g_pdf->GetEYlow();
+  gh=g_pdf->GetEYhigh();
+
+  for (int i=0; i<np; i++){
+    line_gl[i]=g[i]-gl[i];
+    line_gh[i]=g[i]+gh[i];
+    cout << i << "\t" << g[i] << "\t" << line_gl[i] << "\t" << line_gh[i] << endl;
+  }
+  TGraph *gl_pdf=new TGraph(np, dx, line_gl);
+  TGraph *gh_pdf=new TGraph(np, dx, line_gh);
+
+
+  TCanvas *c2; c2=new TCanvas(title,title,50,50,cwidth,clength);
+  for (int i=0; i<g_tot->GetN(); i++){
+    if (ymin>dy[i]) ymin=dy[i];
+    if (ymax<dy[i]) ymax=dy[i];
+    //    std::cout << dx[i] << "\t" << ymin << "\t" << ymax << std::endl;                                                                                                                                        
+  }
+  ymax*=1.2; ymin*=0.5;
+
+  TH1F *h1 = gPad->DrawFrame(xmin,ymin,xmax,ymax);
+
+  h1->Draw(); c2->SetLogy();
+  h1->SetYTitle("#sigma_{pp #rightarrow tH^{-}} [pb]"); h1->SetXTitle(xtitle);
+  h1->GetYaxis()->SetTitleOffset(1.5); h1->GetXaxis()->SetTitleOffset(1.3);
+  //  h1->GetXaxis()->SetLabelSize(0.045); h1->GetYaxis()->SetLabelSize(0.045);                                                                                                                                   
+  h1->Draw();
+
+  myText(0.2,0.45,1,(char*)"#sqrt{s}= 13 TeV");
+  myText(0.2,0.38,1,(char *)ptext.Data());
+  LHCHIGGS_LABEL(0.98,0.725);
+
+  g_totL->SetLineColor(kBlack);
+  g_totL->SetLineWidth(2);
+  g_tot->SetLineWidth(2);
+  g_tot->SetLineColor(kBlack);
+  g_tot->SetFillColor(kGreen);
+
+  g_pdf->SetLineColor(kRed);
+  g_pdf->SetLineWidth(2);
+  //  g5_param->SetLineColor(kBlue);
+  //  g5_param->SetLineWidth(2);
+
+  g_tot->Draw("3");
+  g_totL->Draw("same l");
+
+  gl_pdf->SetLineStyle(7);
+  gl_pdf->SetLineColor(kRed);
+  gh_pdf->SetLineStyle(7);
+  gh_pdf->SetLineColor(kRed);
+
+  /*
+  g5l_param->SetLineStyle(7);
+  g5l_param->SetLineColor(kBlue);
+  g5h_param->SetLineStyle(7);
+  g5h_param->SetLineColor(kBlue);
+  */
+
+  //  g_pdf->Draw("same xl");
+  gl_pdf->Draw("same l");
+  gh_pdf->Draw("same l");
+
+  /*
+  g5_param->Draw("same xl");
+  g5l_param->Draw("same l");
+  g5h_param->Draw("same l");
+  */
+
+  TLegend *leg=new TLegend(0.66,0.65,0.92,0.90);
+  leg->AddEntry(g_tot,"central","l");
+  leg->AddEntry(gl_pdf,"PDF #pm1 #sigma","l");
+  leg->AddEntry(g_tot,"total #pm1 #sigma","lf");
+  //  leg->AddEntry(g5_param,"5FS","l");
+  leg->SetFillColor(10);
+  leg->SetShadowColor(10);
+  leg->SetLineColor(10);
+  leg->Draw();
+
+  gPad->RedrawAxis();
+
+  gPad->SaveAs(outdir+"/"+title+".pdf");
 
 }
 
