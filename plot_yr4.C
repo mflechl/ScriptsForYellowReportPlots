@@ -12,7 +12,6 @@ void plot_yr4(){
 
   set_histos();
 
-  /*
   draw_xsec(1);
   draw_xsec(8);
   draw_xsec(30);
@@ -20,7 +19,6 @@ void plot_yr4(){
   draw_xsec(600,1);
   draw_xsec(1000,1);
   draw_xsec(2000,1);
-  */
 
   draw_xsec(30,0,"4FS");
   draw_xsec(30,0,"5FS");
@@ -74,8 +72,8 @@ void set_histos(){
   }
   vBBM[vBM.size()]=vBM.at(vBM.size()-1)+(vBM.at(vBM.size()-1)-vBM.at(vBM.size()-2))/2;
 
-  //  for (unsigned i=0; i<vBT.size(); i++) cout << vBBT.at(i) << " " << vBT.at(i) << " " << vBBT.at(i+1)  << endl;
-  //  for (unsigned i=0; i<vBM.size(); i++) cout << vBBM.at(i) << " " << vBM.at(i) << " " << vBBM.at(i+1)  << endl;
+  //  for (unsigned i=0; i<vBT.size(); i++) std::cout << vBBT.at(i) << " " << vBT.at(i) << " " << vBBT.at(i+1)  << std::endl;
+  //  for (unsigned i=0; i<vBM.size(); i++) std::cout << vBBM.at(i) << " " << vBM.at(i) << " " << vBBM.at(i+1)  << std::endl;
 
   for (int ifs=0; ifs<2; ifs++){
     h_xsec[ifs]=init_histos("xsec_" +FS[ifs]);
@@ -95,7 +93,7 @@ void set_histos(){
       h_scale_hi[ifs]->Fill(mhp[ifs],tb[ifs],scale_hi[ifs]);
       h_pdf_rel[ifs]->Fill(mhp[ifs],tb[ifs],(pdf_hi[ifs]-pdf_lo[ifs])/(2*xsec[ifs]));
       h_scale_rel[ifs]->Fill(mhp[ifs],tb[ifs],(scale_hi[ifs]-scale_lo[ifs])/(2*xsec[ifs]));
-      //      if ( fabs(tb[ifs]-30)<1e-6 && ifs==0 ) cout << mhp[ifs] << "\t" << tb[ifs] << "\t" << xsec[ifs] << "\t" << -pdf_lo[ifs]-scale_lo[ifs] << "\t" << pdf_hi[ifs] + scale_hi[ifs] << endl;
+      //      if ( fabs(tb[ifs]-30)<1e-6 && ifs==0 ) std::cout << mhp[ifs] << "\t" << tb[ifs] << "\t" << xsec[ifs] << "\t" << -pdf_lo[ifs]-scale_lo[ifs] << "\t" << pdf_hi[ifs] + scale_hi[ifs] << std::endl;
     }
   }
 
@@ -105,8 +103,8 @@ void set_histos(){
     draw_histos(h_pdf_hi[ifs],outdir+"/pdf_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
     draw_histos(h_scale_lo[ifs],outdir+"/scale_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
     draw_histos(h_scale_hi[ifs],outdir+"/scale_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_pdf_rel[ifs],outdir+"/pdf_rel_2d_"+FS[ifs]+"fs.pdf",1e-2,1.2e-1);
-    draw_histos(h_scale_rel[ifs],outdir+"/pdf_scale_2d_"+FS[ifs]+"fs.pdf",1.2e-1-ifs*1.1e-1,2.5e-1-ifs*1.3e-1); //0.12 0.25 : 0.01 0.12
+    draw_histos(h_pdf_rel[ifs],outdir+"/pdf_rel_2d_"+FS[ifs]+"fs.pdf",3e-2,2.0e-1);
+    draw_histos(h_scale_rel[ifs],outdir+"/scale_rel_2d_"+FS[ifs]+"fs.pdf",1.0e-1-ifs*0.9e-1,2.5e-1-ifs*1.3e-1); //0.12 0.25 : 0.01 0.12
   }
 
 }
@@ -115,12 +113,13 @@ void draw_histos(TH2F *h, TString title, float min, float max){
 
   TCanvas *c; c = new TCanvas(h->GetName(),h->GetName(),50,50,cwidth*10./8.,clength);
   c->SetTopMargin(0.05);
-  c->SetRightMargin(0.15);
+  c->SetRightMargin(0.22);
   c->SetLeftMargin(0.10);
   c->SetLogz();
   h->Draw("cont4z");
   h->SetMinimum(min);
   h->SetMaximum(max);
+  if (title.Contains("rel")){ h->GetZaxis()->SetMoreLogLabels();   h->GetZaxis()->SetTitleOffset(1.5); }
   LHCHIGGS_LABEL(0.98,0.14);
 
   gPad->SaveAs(title);
@@ -180,7 +179,7 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
     if (VS_TB) iTB=i+1; else iMH=i+1;
 
     float w=log(vBM.at(iMH-1)/mb)-2;
-    //    cout << vBM.at(iMH-1) << "\t" << param << endl;
+    //    std::cout << vBM.at(iMH-1) << "\t" << param << std::endl;
 
     //central
     xs4.at(i)=h_xsec[0]->GetBinContent(iMH,iTB);
@@ -212,8 +211,8 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
   TGraphAsymmErrors *g4_param=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
   TGraphAsymmErrors *g5_param=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_lo[0], &xs5_hi[0]);
 
-  TGraphAsymmErrors *g4_pdf=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_pdf_lo[0], &xs4_pdf_hi[0]);
-  TGraphAsymmErrors *g5_pdf=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_pdf_lo[0], &xs5_pdf_hi[0]);
+  //  TGraphAsymmErrors *g4_pdf=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_pdf_lo[0], &xs4_pdf_hi[0]);
+  //  TGraphAsymmErrors *g5_pdf=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_pdf_lo[0], &xs5_pdf_hi[0]);
   TGraphAsymmErrors *g4_scale=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_scale_lo[0], &xs4_scale_hi[0]);
   TGraphAsymmErrors *g5_scale=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_scale_lo[0], &xs5_scale_hi[0]);
 
@@ -257,7 +256,7 @@ void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_scale, TS
   for (int i=0; i<np; i++){
     line_gl[i]=g[i]-gl[i];
     line_gh[i]=g[i]+gh[i];
-    cout << i << "\t" << g[i] << "\t" << line_gl[i] << "\t" << line_gh[i] << endl;
+    //    std::cout << i << "\t" << g[i] << "\t" << line_gl[i] << "\t" << line_gh[i] << std::endl;
   }
   TGraph *gl_scale=new TGraph(np, dx, line_gl);
   TGraph *gh_scale=new TGraph(np, dx, line_gh);
