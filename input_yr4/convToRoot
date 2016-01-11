@@ -1,0 +1,3 @@
+#!/bin/bash
+root -l readanal.C\(\"4f_13tev\"\)
+root -l readanal.C\(\"5f_13tev\"\)
