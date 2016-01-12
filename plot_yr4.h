@@ -27,6 +27,7 @@ TH2F *h_pdf_rel[2];
 TH2F *h_scale_rel[2];
 TH2F *h_tot_lo[2];
 TH2F *h_tot_hi[2];
+TH2F *h_tot_rel[2];
 
 const TString FNAME[2]={"input_yr4/4f_13tev.root","input_yr4/5f_13tev.root"};
 
@@ -36,6 +37,9 @@ const TString FS[2]={"4","5"};
 void set_histos();
 void draw_histos(TH2F *h, /*TCanvas *c,*/ TString title, float min, float max);
 TH2F* init_histos(TString title, TString ztitle="#sigma [pb]");
+
+TGraphAsymmErrors* scale_graph(const TGraphAsymmErrors* g_orig, const TGraph* g_scale);
+
 
 void draw_xsec(float param, const int VS_TB=0,const TString scheme="");
 void draw_graphs(TGraphAsymmErrors *g_mass, TGraphAsymmErrors *g4_mass, TGraphAsymmErrors *g5_mass, TString title, TString xtitle, TString ptext="");

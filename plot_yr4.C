@@ -15,6 +15,7 @@ void plot_yr4(){
   draw_xsec(1);
   draw_xsec(8);
   draw_xsec(30);
+
   draw_xsec(200,1);
   draw_xsec(600,1);
   draw_xsec(1000,1);
@@ -79,7 +80,9 @@ void set_histos(){
     h_xsec[ifs]=init_histos("xsec_" +FS[ifs]);
     h_pdf_lo[ifs]=init_histos("pdf_lo_"+FS[ifs]);        h_pdf_hi[ifs]=init_histos("pdf_hi_"+FS[ifs]);
     h_scale_lo[ifs]=init_histos("scale_lo_"+FS[ifs]);    h_scale_hi[ifs]=init_histos("scale_hi_"+FS[ifs]);
+    h_tot_lo[ifs]=init_histos("tot_lo_"+FS[ifs]);    h_tot_hi[ifs]=init_histos("tot_hi_"+FS[ifs]);
     h_pdf_rel[ifs]=init_histos("pdf_rel_"+FS[ifs],"relative pdf uncertainty");      h_scale_rel[ifs]=init_histos("scale_rel_"+FS[ifs],"relative scale uncertainty");
+    h_tot_rel[ifs]=init_histos("tot_rel_"+FS[ifs],"relative total uncertainty");
   }
 
   if ( nentries[0]>nentries[1] ) nentries[0]=nentries[1];
@@ -88,11 +91,14 @@ void set_histos(){
       t[ifs]->GetEntry(i);
       h_xsec[ifs]->Fill(mhp[ifs],tb[ifs],xsec[ifs]);
       h_pdf_lo[ifs]->Fill(mhp[ifs],tb[ifs],-pdf_lo[ifs]);
-      h_pdf_hi[ifs]->Fill(mhp[ifs],tb[ifs],pdf_hi[ifs]);
+      h_pdf_hi[ifs]->Fill(mhp[ifs],tb[ifs], pdf_hi[ifs]);
       h_scale_lo[ifs]->Fill(mhp[ifs],tb[ifs],-scale_lo[ifs]);
-      h_scale_hi[ifs]->Fill(mhp[ifs],tb[ifs],scale_hi[ifs]);
+      h_scale_hi[ifs]->Fill(mhp[ifs],tb[ifs], scale_hi[ifs]);
+      h_tot_lo[ifs]->Fill(mhp[ifs],tb[ifs],-scale_lo[ifs]-pdf_lo[ifs]);
+      h_tot_hi[ifs]->Fill(mhp[ifs],tb[ifs], scale_hi[ifs]+pdf_hi[ifs]);
       h_pdf_rel[ifs]->Fill(mhp[ifs],tb[ifs],(pdf_hi[ifs]-pdf_lo[ifs])/(2*xsec[ifs]));
       h_scale_rel[ifs]->Fill(mhp[ifs],tb[ifs],(scale_hi[ifs]-scale_lo[ifs])/(2*xsec[ifs]));
+      h_tot_rel[ifs]->Fill(mhp[ifs],tb[ifs],(scale_hi[ifs] +pdf_hi[ifs] -scale_lo[ifs] -pdf_lo[ifs])/(2*xsec[ifs]));
       //      if ( fabs(tb[ifs]-30)<1e-6 && ifs==0 ) std::cout << mhp[ifs] << "\t" << tb[ifs] << "\t" << xsec[ifs] << "\t" << -pdf_lo[ifs]-scale_lo[ifs] << "\t" << pdf_hi[ifs] + scale_hi[ifs] << std::endl;
     }
   }
@@ -103,8 +109,11 @@ void set_histos(){
     draw_histos(h_pdf_hi[ifs],outdir+"/pdf_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
     draw_histos(h_scale_lo[ifs],outdir+"/scale_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
     draw_histos(h_scale_hi[ifs],outdir+"/scale_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
+    draw_histos(h_tot_lo[ifs],outdir+"/tot_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
+    draw_histos(h_tot_hi[ifs],outdir+"/tot_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
     draw_histos(h_pdf_rel[ifs],outdir+"/pdf_rel_2d_"+FS[ifs]+"fs.pdf",3e-2,2.0e-1);
     draw_histos(h_scale_rel[ifs],outdir+"/scale_rel_2d_"+FS[ifs]+"fs.pdf",1.0e-1-ifs*0.9e-1,2.5e-1-ifs*1.3e-1); //0.12 0.25 : 0.01 0.12
+    draw_histos(h_tot_rel[ifs],outdir+"/tot_rel_2d_"+FS[ifs]+"fs.pdf",0.1,0.36);
   }
 
 }
@@ -185,7 +194,7 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
     xs4.at(i)=h_xsec[0]->GetBinContent(iMH,iTB);
     xs5.at(i)=h_xsec[1]->GetBinContent(iMH,iTB);
     xs.at(i)=(xs4.at(i)+w*xs5.at(i))/(1+w);
-    //    xs.at(i)=(xs4.at(i)+xs5.at(i))/2; //TODO: Santander-matching
+    //    xs.at(i)=(xs4.at(i)+xs5.at(i))/2; //simple average
 
     //total uncertainty
     xs4_hi.at(i)=h_pdf_hi[0]->GetBinContent(iMH,iTB)+h_scale_hi[0]->GetBinContent(iMH,iTB);
@@ -207,9 +216,9 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
   }
   float* x;
   if (VS_TB) x=&vBT[0]; else x=&vBM[0];
-  TGraphAsymmErrors *g_param =new TGraphAsymmErrors(vsize, x, &xs[0], 0, 0, &xs_lo[0], &xs_hi[0]);
-  TGraphAsymmErrors *g4_param=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]);
-  TGraphAsymmErrors *g5_param=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_lo[0], &xs5_hi[0]);
+  TGraphAsymmErrors *g_param =new TGraphAsymmErrors(vsize, x, &xs[0], 0, 0, &xs_lo[0], &xs_hi[0]); g_param->SetTitle("matched");
+  TGraphAsymmErrors *g4_param=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_lo[0], &xs4_hi[0]); g4_param->SetTitle("4fs");
+  TGraphAsymmErrors *g5_param=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_lo[0], &xs5_hi[0]); g5_param->SetTitle("5fs");
 
   //  TGraphAsymmErrors *g4_pdf=new TGraphAsymmErrors(vsize, x, &xs4[0], 0, 0, &xs4_pdf_lo[0], &xs4_pdf_hi[0]);
   //  TGraphAsymmErrors *g5_pdf=new TGraphAsymmErrors(vsize, x, &xs5[0], 0, 0, &xs5_pdf_lo[0], &xs5_pdf_hi[0]);
@@ -227,11 +236,39 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
 
   if ( scheme=="" ){
     draw_graphs(g_param, g4_param, g5_param, title, xtitle, ptext);
+    draw_graphs(scale_graph(g_param, g_param), scale_graph(g4_param, g_param), scale_graph(g5_param,g_param), title+"_scaled", xtitle, ptext);
   } else if ( scheme=="4FS" ){
     draw_graphs_scheme(g4_param, g4_scale, title, xtitle, ptext);
   } else if ( scheme=="5FS" ){
     draw_graphs_scheme(g5_param, g5_scale, title, xtitle, ptext);
   }
+}
+
+
+TGraphAsymmErrors* scale_graph(const TGraphAsymmErrors* g_orig, const TGraph* g_scale){
+
+  TGraphAsymmErrors *my_orig=new TGraphAsymmErrors(*g_orig);
+  TGraph *my_scale=new TGraph(*g_scale);
+
+  int np=my_orig->GetN();
+  double *dx=new double[np]; dx=my_orig->GetX();
+  double *dy=new double[np]; dy=my_orig->GetY();
+  double *el=new double[np]; el=my_orig->GetEYlow();
+  double *eh=new double[np]; eh=my_orig->GetEYhigh();
+
+  double *scale=new double[np]; scale=my_scale->GetY();
+
+  //  std::cout << std::endl << my_orig->GetTitle() << std::endl;
+  for (int i=0; i<np; i++){
+    //    std::cout << dx[i] << "\t" << dy[i] << "\t" << el[i] << "\t" << eh[i] << "\t" << scale[i] << std::endl;
+    dy[i]/=scale[i];
+    el[i]/=scale[i];
+    eh[i]/=scale[i];
+  }
+
+  TGraphAsymmErrors *my_new = new TGraphAsymmErrors(np, &dx[0], &dy[0], 0, 0, &el[0], &eh[0]);
+
+  return my_new;
 }
 
 void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_scale, TString title, TString xtitle, TString ptext){
@@ -382,10 +419,20 @@ void draw_graphs(TGraphAsymmErrors *g_param, TGraphAsymmErrors *g4_param, TGraph
   }
   ymax*=1.2; ymin*=0.5;
 
+  if ( title.Contains("_scaled") ) { ymin=0.5; ymax=2.0; }
+
   TH1F *h1 = gPad->DrawFrame(xmin,ymin,xmax,ymax);
 
-  h1->Draw(); c2->SetLogy();
-  h1->SetYTitle("#sigma_{pp #rightarrow tH^{-}} [pb]"); h1->SetXTitle(xtitle);
+  h1->Draw();
+  h1->SetXTitle(xtitle);
+
+  if ( !title.Contains("_scaled") ) { 
+    c2->SetLogy();  
+    h1->SetYTitle("#sigma_{pp #rightarrow tH^{-}} [pb]"); 
+  } else{
+    h1->SetYTitle("#sigma_{pp #rightarrow tH^{-}} / #sigma_{pp #rightarrow tH^{-}}^{matched} [pb]"); 
+  }
+
   h1->GetYaxis()->SetTitleOffset(1.5); h1->GetXaxis()->SetTitleOffset(1.3);
   //  h1->GetXaxis()->SetLabelSize(0.045); h1->GetYaxis()->SetLabelSize(0.045);
   h1->Draw();
