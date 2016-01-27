@@ -4,6 +4,8 @@ const int cwidth=800;
 const int clength=600;
 const TString outdir="yr4_plots";
 
+//draw xsec arguments: 1. mass or tb value; 2. plot vs tb (1) or mass (0, default); 3. scheme, empty "" (default) for matched, "4FS"/"5FS" otherwise
+
 void plot_yr4(){
 
   #ifdef __CINT__
@@ -12,6 +14,7 @@ void plot_yr4(){
 
   set_histos();
 
+  /*
   draw_xsec(1);
   draw_xsec(8);
   draw_xsec(30);
@@ -23,9 +26,53 @@ void plot_yr4(){
 
   draw_xsec(30,0,"4FS");
   draw_xsec(30,0,"5FS");
+  */
+
+  produce_grid_output();
 
 }
 
+void produce_grid_output(){
+
+  time_t now = time(0);
+   
+  // convert now to string form
+  tm *ltm = localtime(&now);
+
+  /*
+  cout << "Year: "<< 1900 + ltm->tm_year << endl;
+  cout << "Month: "<< 1 + ltm->tm_mon<< endl;
+  cout << "Day: "<<  ltm->tm_mday << endl;
+  */
+
+  //  char* dt = ctime(&now);
+  //  cout << "The local date and time is: " << dt << endl;
+
+  TString stime; stime+=1900 + ltm->tm_year; stime+="_"; stime+= 1 + ltm->tm_mon; stime+="_"; stime+=ltm->tm_mday;
+  TString fname="xsec_13TeV_tHp_"+stime+".txt";
+
+  gridfile.open(fname);
+  cout << "Writing to " << fname << endl;
+
+  gridfile << "#Contacts: Martin Flechl, Steve Sekula, Maria Ubiali, Marco Zaro" << std::endl;
+  gridfile << "#Date: " << stime.ReplaceAll("_","/") << std::endl;
+  gridfile << "#######################################################################" << std::endl;
+  gridfile << "#  IF YOU USE THIS NUMBERS, CITE *AT LEAST* THE REFERENCES GIVEN HERE: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHXSWGMSSMCharged#Citation_guide" << std::endl;
+  gridfile << "#######################################################################" << std::endl;
+  gridfile << "#Preliminary: Santander-matched cross sections for the process gg->tH+ + X  in tan beta (0.1-60) and mH+ (200-2000 GeV), sqrt(s)=13 TeV, in units of GeV and picobarn." << std::endl;
+  gridfile << "#Also given are total uncertainties (PDF, alphas, scale, mb). Numbers are for 2HDM type-II (a la MSSM), but without SQCD corrections." << std::endl;
+  gridfile << "#To translate into MSSM benchmarks, see https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHXSWGMSSMCharged#Heavy_charged_Higgs_cross_sectio" << std::endl;
+  gridfile << "#The numbers for type-II 2HDM can also be applied to type I/III/IV, if you follow the recipe outline at the end of Section 6 of arXiv:1409.5615" << std::endl;
+  gridfile << "#" << std::endl;
+  gridfile << "#mhp tb xsec unc- unc+" << std::endl;
+
+  for (unsigned i=0; i<vBM.size(); i++){
+    draw_xsec(vBM.at(i), 1, "", 1);
+  }
+
+  gridfile.close();
+
+}
 
 
 void set_histos(){
@@ -141,7 +188,7 @@ TH2F* init_histos(TString title, TString ztitle){
   return h;
 }
 
-void draw_xsec(const float param, const int VS_TB, const TString scheme){
+void draw_xsec(const float param, const int VS_TB, const TString scheme, int textonly){
 
   unsigned vsize=vBM.size();
   if (VS_TB) vsize=vBT.size();
@@ -213,7 +260,10 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme){
     xs_lo.at(i)=(xs4_lo.at(i)+w*xs5_lo.at(i))/(1+w);
     xs_hi.at(i)=(xs4_hi.at(i)+w*xs5_hi.at(i))/(1+w);
 
+    if (textonly) gridfile << vBM.at(iMH-1) << "  " << vBT.at(iTB-1) << "  " << xs.at(i) << "  " << xs_lo.at(i) << "  " << xs_hi.at(i) << "\n";
   }
+  if (textonly) return;
+
   float* x;
   if (VS_TB) x=&vBT[0]; else x=&vBM[0];
   TGraphAsymmErrors *g_param =new TGraphAsymmErrors(vsize, x, &xs[0], 0, 0, &xs_lo[0], &xs_hi[0]); g_param->SetTitle("matched");
