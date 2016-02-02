@@ -14,7 +14,6 @@ void plot_yr4(){
 
   set_histos();
 
-  /*
   draw_xsec(1);
   draw_xsec(8);
   draw_xsec(30);
@@ -26,7 +25,6 @@ void plot_yr4(){
 
   draw_xsec(30,0,"4FS");
   draw_xsec(30,0,"5FS");
-  */
 
   produce_grid_output();
 
@@ -57,7 +55,7 @@ void produce_grid_output(){
   gridfile << "#Contacts: Martin Flechl, Steve Sekula, Maria Ubiali, Marco Zaro" << std::endl;
   gridfile << "#Date: " << stime.ReplaceAll("_","/") << std::endl;
   gridfile << "#######################################################################" << std::endl;
-  gridfile << "#  IF YOU USE THIS NUMBERS, CITE *AT LEAST* THE REFERENCES GIVEN HERE: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHXSWGMSSMCharged#Citation_guide" << std::endl;
+  gridfile << "#  IF YOU USE THESE NUMBERS, CITE *AT LEAST* THE REFERENCES GIVEN HERE: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHXSWGMSSMCharged#Citation_guide" << std::endl;
   gridfile << "#######################################################################" << std::endl;
   gridfile << "#Preliminary: Santander-matched cross sections for the process gg->tH+ + X  in tan beta (0.1-60) and mH+ (200-2000 GeV), sqrt(s)=13 TeV, in units of GeV and picobarn." << std::endl;
   gridfile << "#Also given are total uncertainties (PDF, alphas, scale, mb). Numbers are for 2HDM type-II (a la MSSM), but without SQCD corrections." << std::endl;
