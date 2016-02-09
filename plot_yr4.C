@@ -14,6 +14,7 @@ void plot_yr4(){
 
   set_histos();
 
+  /*
   draw_xsec(1);
   draw_xsec(8);
   draw_xsec(30);
@@ -27,6 +28,17 @@ void plot_yr4(){
   draw_xsec(30,0,"5FS");
 
   produce_grid_output();
+  */
+
+  get_xsec(200, 1,1);
+  get_xsec(200, 8,1);
+  get_xsec(200,30,1);
+  get_xsec(600, 1,1);
+  get_xsec(600, 8,1);
+  get_xsec(600,30,1);
+  get_xsec(1000, 1,1);
+  get_xsec(1000, 8,1);
+  get_xsec(1000,30,1);
 
 }
 
@@ -186,6 +198,98 @@ TH2F* init_histos(TString title, TString ztitle){
   return h;
 }
 
+void get_xsec(const float mhp, const float tb, int produce_output){
+
+  static int been_here=0;
+
+  int iTB=-1;
+  int iMH=-1;
+
+  for (unsigned i=0; i<vBBM.size()-1; i++){
+    if ( vBBM.at(i)<mhp && vBBM.at(i+1)>mhp ){ iMH=i+1; break; }
+  }
+  if (iMH<0){ std::cout << "Warning: mhp value not in range!" << std::endl; return; }
+
+  for (unsigned i=0; i<vBBT.size()-1; i++){
+    if ( vBBT.at(i)<tb && vBBT.at(i+1)>tb ){ iTB=i+1; break; }
+  }
+  if (iTB<0){ std::cout << "Warning: tb value not in range!" << std::endl; return; }
+
+  float w=log(vBM.at(iMH-1)/mb)-2;
+
+  //central
+  float xs4=h_xsec[0]->GetBinContent(iMH,iTB);
+  float xs5=h_xsec[1]->GetBinContent(iMH,iTB);
+  float xs=(xs4+w*xs5)/(1+w);
+
+  //uncertainties
+  float xs4_hi=h_pdf_hi[0]->GetBinContent(iMH,iTB)+h_scale_hi[0]->GetBinContent(iMH,iTB);
+  float xs4_lo=h_pdf_lo[0]->GetBinContent(iMH,iTB)+h_scale_lo[0]->GetBinContent(iMH,iTB);
+  float xs4_pdf_hi=h_pdf_hi[0]->GetBinContent(iMH,iTB);
+  float xs4_pdf_lo=h_pdf_lo[0]->GetBinContent(iMH,iTB);
+  float xs4_scale_hi=h_scale_hi[0]->GetBinContent(iMH,iTB);
+  float xs4_scale_lo=h_scale_lo[0]->GetBinContent(iMH,iTB);
+  float xs5_hi=h_pdf_hi[1]->GetBinContent(iMH,iTB)+h_scale_hi[1]->GetBinContent(iMH,iTB);
+  float xs5_lo=h_pdf_lo[1]->GetBinContent(iMH,iTB)+h_scale_lo[1]->GetBinContent(iMH,iTB);
+  float xs5_pdf_hi=h_pdf_hi[1]->GetBinContent(iMH,iTB);
+  float xs5_pdf_lo=h_pdf_lo[1]->GetBinContent(iMH,iTB);
+  float xs5_scale_hi=h_scale_hi[1]->GetBinContent(iMH,iTB);
+  float xs5_scale_lo=h_scale_lo[1]->GetBinContent(iMH,iTB);
+
+  float xs_lo=(xs4_lo+w*xs5_lo)/(1+w);
+  float xs_hi=(xs4_hi+w*xs5_hi)/(1+w);
+
+  std::cout.precision(6);
+  std::cout.setf(ios::fixed, ios::floatfield); 
+
+  if (produce_output){
+    if ( !been_here ) 
+      std::cout << "mhp [GeV] & tan beta &\t sigma_4FS & Dsigma_sca & Dsigma_pdf & Dsigma_tot &\t sigma_5FS & Dsigma_sca & Dsigma_pdf & Dsigma_tot &\t sigma_match & Dsigma_tot" << std::endl;
+    std::cout << std::setw(4) << (int)vBM.at(iMH-1) <<" & "<< std::setw(2) << (int)vBT.at(iTB-1) <<" &\t" 
+	      << xs4 <<" & "<<  (xs4_scale_hi+xs4_scale_lo)/2 <<" & "<<  (xs4_pdf_hi+xs4_pdf_lo)/2  <<" & "<<  (xs4_hi+xs4_lo)/2 <<" &\t"
+	      << xs5 <<" & "<< (xs5_scale_hi+xs5_scale_lo)/2 <<" & "<<  (xs5_pdf_hi+xs5_pdf_lo)/2  <<" & "<<  (xs5_hi+xs4_lo)/2  <<" &\t"
+	      << xs  <<" & "<<  (xs_hi+xs_lo)/2 <<" \\\\ "                              << std::endl;
+    //	      << fo(xs4) <<" & "<< fo( (xs4_scale_hi+xs4_scale_lo)/2 ,1) <<" & "<< fo( (xs4_pdf_hi+xs4_pdf_lo)/2 ,1)  <<" & "<< fo( (xs4_hi+xs4_lo)/2 ,1) <<" &\t"
+    //	      << fo(xs5) <<" & "<<fo( (xs5_scale_hi+xs5_scale_lo)/2 ,1) <<" & "<< fo( (xs5_pdf_hi+xs5_pdf_lo)/2 ,1)  <<" & "<< fo( (xs5_hi+xs4_lo)/2 ,1)  <<" &\t"
+    //	      << fo(xs)  <<" & "<< fo( (xs_hi+xs_lo)/2 ,1) <<" &\t"                              << std::endl;
+  }
+
+  been_here=1;
+
+
+
+  /*
+  for (unsigned im=0; im<vBM.size(); im++){
+    for (unsigned it=0; it<vBT.size(); it++){
+
+
+
+    }
+  }
+  */
+
+
+}
+
+TString fo(const float number, const int prec){
+
+  ios::fmtflags old_settings = cout.flags();
+
+  std::ostringstream m_oss;
+  m_oss << std::setprecision(prec) << std::scientific << number;
+
+  TString m=m_oss.str();
+  m.ReplaceAll("e+0"," \\cdot 10^{");
+  m.ReplaceAll("e-0"," \\cdot 10^{-");
+  m.Append("}$");
+  m.Prepend("$");
+
+  cout.flags(old_settings);
+
+  return m;
+
+}
+
 void draw_xsec(const float param, const int VS_TB, const TString scheme, int textonly){
 
   unsigned vsize=vBM.size();
@@ -228,7 +332,6 @@ void draw_xsec(const float param, const int VS_TB, const TString scheme, int tex
     if (iTB<0){ std::cout << "Warning: tb value not in range!" << std::endl; return; }
   }
 
-  const float mb=4.75;
   for (unsigned i=0; i<vsize; i++){
     if (VS_TB) iTB=i+1; else iMH=i+1;
 

@@ -1,5 +1,8 @@
 #include<iostream>
 #include<fstream>
+#include<iomanip>
+#include<sstream>
+
 #include <ctime>
 #include<vector>
 
@@ -13,6 +16,8 @@
 //#include "TPad.h"
 
 #include "LHCHiggsUtils.C"
+
+const float mb=4.75;
 
 std::vector<float> vBM;
 std::vector<float> vBBM;
@@ -49,3 +54,5 @@ void draw_xsec(float param, const int VS_TB=0,const TString scheme="", int texto
 void draw_graphs(TGraphAsymmErrors *g_mass, TGraphAsymmErrors *g4_mass, TGraphAsymmErrors *g5_mass, TString title, TString xtitle, TString ptext="");
 void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_pdf, TString title, TString xtitle, TString ptext);
 void produce_grid_output();
+void get_xsec(const float mhp, const float tb, int produce_output=0);
+TString fo(const float number, const int prec=2);
