@@ -14,7 +14,6 @@ void plot_yr4(){
 
   set_histos();
 
-  /*
   draw_xsec(1);
   draw_xsec(8);
   draw_xsec(30);
@@ -27,8 +26,7 @@ void plot_yr4(){
   draw_xsec(30,0,"4FS");
   draw_xsec(30,0,"5FS");
 
-  produce_grid_output();
-  */
+  //  produce_grid_output();
 
   get_xsec(200, 1,1);
   get_xsec(200, 8,1);
@@ -161,16 +159,16 @@ void set_histos(){
   }
 
   for (int ifs=0; ifs<2; ifs++){
-    draw_histos(h_xsec[ifs],outdir+"/xsec_2d_"+FS[ifs]+"fs.pdf",1e-5,100);
-    draw_histos(h_pdf_lo[ifs],outdir+"/pdf_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_pdf_hi[ifs],outdir+"/pdf_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_scale_lo[ifs],outdir+"/scale_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_scale_hi[ifs],outdir+"/scale_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_tot_lo[ifs],outdir+"/tot_lo_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_tot_hi[ifs],outdir+"/tot_hi_2d_"+FS[ifs]+"fs.pdf",1e-6,10);
-    draw_histos(h_pdf_rel[ifs],outdir+"/pdf_rel_2d_"+FS[ifs]+"fs.pdf",3e-2,2.0e-1);
-    draw_histos(h_scale_rel[ifs],outdir+"/scale_rel_2d_"+FS[ifs]+"fs.pdf",1.0e-1-ifs*0.9e-1,2.5e-1-ifs*1.3e-1); //0.12 0.25 : 0.01 0.12
-    draw_histos(h_tot_rel[ifs],outdir+"/tot_rel_2d_"+FS[ifs]+"fs.pdf",0.1,0.36);
+    draw_histos(h_xsec[ifs],outdir+"/xsec_2d_"+FS[ifs]+"fs",1e-5,100);
+    draw_histos(h_pdf_lo[ifs],outdir+"/pdf_lo_2d_"+FS[ifs]+"fs",1e-6,10);
+    draw_histos(h_pdf_hi[ifs],outdir+"/pdf_hi_2d_"+FS[ifs]+"fs",1e-6,10);
+    draw_histos(h_scale_lo[ifs],outdir+"/scale_lo_2d_"+FS[ifs]+"fs",1e-6,10);
+    draw_histos(h_scale_hi[ifs],outdir+"/scale_hi_2d_"+FS[ifs]+"fs",1e-6,10);
+    draw_histos(h_tot_lo[ifs],outdir+"/tot_lo_2d_"+FS[ifs]+"fs",1e-6,10);
+    draw_histos(h_tot_hi[ifs],outdir+"/tot_hi_2d_"+FS[ifs]+"fs",1e-6,10);
+    draw_histos(h_pdf_rel[ifs],outdir+"/pdf_rel_2d_"+FS[ifs]+"fs",3e-2,2.0e-1);
+    draw_histos(h_scale_rel[ifs],outdir+"/scale_rel_2d_"+FS[ifs]+"fs",1.0e-1-ifs*0.9e-1,2.5e-1-ifs*1.3e-1); //0.12 0.25 : 0.01 0.12
+    draw_histos(h_tot_rel[ifs],outdir+"/tot_rel_2d_"+FS[ifs]+"fs",0.1,0.36);
   }
 
 }
@@ -188,7 +186,8 @@ void draw_histos(TH2F *h, TString title, float min, float max){
   if (title.Contains("rel")){ h->GetZaxis()->SetMoreLogLabels();   h->GetZaxis()->SetTitleOffset(1.5); }
   LHCHIGGS_LABEL(0.98,0.14);
 
-  gPad->SaveAs(title);
+  gPad->SaveAs(title+".pdf");
+  gPad->SaveAs(title+".png");
 
 }
 
@@ -519,6 +518,7 @@ void draw_graphs_scheme(TGraphAsymmErrors *g_tot, TGraphAsymmErrors *g_scale, TS
   gPad->RedrawAxis();
 
   gPad->SaveAs(outdir+"/"+title+".pdf");
+  gPad->SaveAs(outdir+"/"+title+".png");
 
 }
 
@@ -635,6 +635,7 @@ void draw_graphs(TGraphAsymmErrors *g_param, TGraphAsymmErrors *g4_param, TGraph
   gPad->RedrawAxis();
 
   gPad->SaveAs(outdir+"/"+title+".pdf");
+  gPad->SaveAs(outdir+"/"+title+".png");
 
   //  for (unsigned i=0; i<vBM.size(); i++) std::cout << vBM.at(i) << "\t" << xs4.at(i) << "\t -" << xs4_lo.at(i) << "\t +" << xs4_hi.at(i) << "\t XX" << std::endl;
 
